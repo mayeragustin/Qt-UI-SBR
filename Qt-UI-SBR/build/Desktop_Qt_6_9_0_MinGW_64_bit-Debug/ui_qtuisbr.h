@@ -85,21 +85,21 @@ public:
     QGridLayout *gridLayout_9;
     QHBoxLayout *horizontalLayout_12;
     QLabel *label_8;
-    QCheckBox *checkBox_hcsr_7;
+    QCheckBox *checkBox_IR1;
     QFrame *line_9;
     QLCDNumber *lcdNumber_LF1;
     QFrame *frame_10;
     QGridLayout *gridLayout_13;
     QHBoxLayout *horizontalLayout_18;
     QLabel *label_11;
-    QCheckBox *checkBox_hcsr_10;
+    QCheckBox *checkBox_IR2;
     QFrame *line_12;
     QLCDNumber *lcdNumber_LF2;
     QFrame *frame_12;
     QGridLayout *gridLayout_15;
     QHBoxLayout *horizontalLayout_20;
     QLabel *label_13;
-    QCheckBox *checkBox_hcsr_12;
+    QCheckBox *checkBox_IR3;
     QFrame *line_14;
     QLCDNumber *lcdNumber_LF3;
     QFrame *frame_16;
@@ -108,34 +108,34 @@ public:
     QFrame *line_16;
     QHBoxLayout *horizontalLayout_22;
     QLabel *label_15;
-    QCheckBox *checkBox_hcsr_14;
+    QCheckBox *checkBox_IR4;
     QHBoxLayout *horizontalLayout_24;
     QFrame *frame_8;
     QGridLayout *gridLayout_11;
     QHBoxLayout *horizontalLayout_16;
     QLabel *label_9;
-    QCheckBox *checkBox_hcsr_8;
+    QCheckBox *checkBox_IR5;
     QFrame *line_10;
     QLCDNumber *lcdNumber_WD1;
     QFrame *frame_9;
     QGridLayout *gridLayout_12;
     QHBoxLayout *horizontalLayout_17;
     QLabel *label_10;
-    QCheckBox *checkBox_hcsr_9;
+    QCheckBox *checkBox_IR6;
     QFrame *line_11;
     QLCDNumber *lcdNumber_WD2;
     QFrame *frame_11;
     QGridLayout *gridLayout_14;
     QHBoxLayout *horizontalLayout_19;
     QLabel *label_12;
-    QCheckBox *checkBox_hcsr_11;
+    QCheckBox *checkBox_IR7;
     QFrame *line_13;
     QLCDNumber *lcdNumber_WD3;
     QFrame *frame_15;
     QGridLayout *gridLayout_16;
     QHBoxLayout *horizontalLayout_21;
     QLabel *label_14;
-    QCheckBox *checkBox_hcsr_13;
+    QCheckBox *checkBox_IR8;
     QFrame *line_15;
     QLCDNumber *lcdNumber_WD4;
     QWidget *motors;
@@ -788,11 +788,14 @@ public:
 
         horizontalLayout_12->addWidget(label_8, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_7 = new QCheckBox(frame_7);
-        checkBox_hcsr_7->setObjectName("checkBox_hcsr_7");
-        checkBox_hcsr_7->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR1 = new QCheckBox(frame_7);
+        checkBox_IR1->setObjectName("checkBox_IR1");
+        checkBox_IR1->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/Icon/Resources/Icons/chart-histogram w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        checkBox_IR1->setIcon(icon4);
 
-        horizontalLayout_12->addWidget(checkBox_hcsr_7);
+        horizontalLayout_12->addWidget(checkBox_IR1);
 
         horizontalLayout_12->setStretch(0, 1);
 
@@ -835,11 +838,12 @@ public:
 
         horizontalLayout_18->addWidget(label_11, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_10 = new QCheckBox(frame_10);
-        checkBox_hcsr_10->setObjectName("checkBox_hcsr_10");
-        checkBox_hcsr_10->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR2 = new QCheckBox(frame_10);
+        checkBox_IR2->setObjectName("checkBox_IR2");
+        checkBox_IR2->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR2->setIcon(icon4);
 
-        horizontalLayout_18->addWidget(checkBox_hcsr_10);
+        horizontalLayout_18->addWidget(checkBox_IR2);
 
         horizontalLayout_18->setStretch(0, 1);
 
@@ -882,11 +886,12 @@ public:
 
         horizontalLayout_20->addWidget(label_13, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_12 = new QCheckBox(frame_12);
-        checkBox_hcsr_12->setObjectName("checkBox_hcsr_12");
-        checkBox_hcsr_12->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR3 = new QCheckBox(frame_12);
+        checkBox_IR3->setObjectName("checkBox_IR3");
+        checkBox_IR3->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR3->setIcon(icon4);
 
-        horizontalLayout_20->addWidget(checkBox_hcsr_12);
+        horizontalLayout_20->addWidget(checkBox_IR3);
 
         horizontalLayout_20->setStretch(0, 1);
 
@@ -946,11 +951,12 @@ public:
 
         horizontalLayout_22->addWidget(label_15, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_14 = new QCheckBox(frame_16);
-        checkBox_hcsr_14->setObjectName("checkBox_hcsr_14");
-        checkBox_hcsr_14->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR4 = new QCheckBox(frame_16);
+        checkBox_IR4->setObjectName("checkBox_IR4");
+        checkBox_IR4->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR4->setIcon(icon4);
 
-        horizontalLayout_22->addWidget(checkBox_hcsr_14);
+        horizontalLayout_22->addWidget(checkBox_IR4);
 
         horizontalLayout_22->setStretch(0, 1);
 
@@ -985,11 +991,12 @@ public:
 
         horizontalLayout_16->addWidget(label_9, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_8 = new QCheckBox(frame_8);
-        checkBox_hcsr_8->setObjectName("checkBox_hcsr_8");
-        checkBox_hcsr_8->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR5 = new QCheckBox(frame_8);
+        checkBox_IR5->setObjectName("checkBox_IR5");
+        checkBox_IR5->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR5->setIcon(icon4);
 
-        horizontalLayout_16->addWidget(checkBox_hcsr_8);
+        horizontalLayout_16->addWidget(checkBox_IR5);
 
         horizontalLayout_16->setStretch(0, 1);
 
@@ -1032,11 +1039,12 @@ public:
 
         horizontalLayout_17->addWidget(label_10, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_9 = new QCheckBox(frame_9);
-        checkBox_hcsr_9->setObjectName("checkBox_hcsr_9");
-        checkBox_hcsr_9->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR6 = new QCheckBox(frame_9);
+        checkBox_IR6->setObjectName("checkBox_IR6");
+        checkBox_IR6->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR6->setIcon(icon4);
 
-        horizontalLayout_17->addWidget(checkBox_hcsr_9);
+        horizontalLayout_17->addWidget(checkBox_IR6);
 
         horizontalLayout_17->setStretch(0, 1);
 
@@ -1079,11 +1087,12 @@ public:
 
         horizontalLayout_19->addWidget(label_12, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_11 = new QCheckBox(frame_11);
-        checkBox_hcsr_11->setObjectName("checkBox_hcsr_11");
-        checkBox_hcsr_11->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR7 = new QCheckBox(frame_11);
+        checkBox_IR7->setObjectName("checkBox_IR7");
+        checkBox_IR7->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR7->setIcon(icon4);
 
-        horizontalLayout_19->addWidget(checkBox_hcsr_11);
+        horizontalLayout_19->addWidget(checkBox_IR7);
 
         horizontalLayout_19->setStretch(0, 1);
 
@@ -1126,11 +1135,12 @@ public:
 
         horizontalLayout_21->addWidget(label_14, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_13 = new QCheckBox(frame_15);
-        checkBox_hcsr_13->setObjectName("checkBox_hcsr_13");
-        checkBox_hcsr_13->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR8 = new QCheckBox(frame_15);
+        checkBox_IR8->setObjectName("checkBox_IR8");
+        checkBox_IR8->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_IR8->setIcon(icon4);
 
-        horizontalLayout_21->addWidget(checkBox_hcsr_13);
+        horizontalLayout_21->addWidget(checkBox_IR8);
 
         horizontalLayout_21->setStretch(0, 1);
 
@@ -1998,9 +2008,9 @@ public:
         checkBox_mpu6050datalive = new QCheckBox(frame);
         checkBox_mpu6050datalive->setObjectName("checkBox_mpu6050datalive");
         checkBox_mpu6050datalive->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/Icon/Resources/Icons/display-arrow-down.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        checkBox_mpu6050datalive->setIcon(icon4);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/Icon/Resources/Icons/display-arrow-down.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        checkBox_mpu6050datalive->setIcon(icon5);
 
         horizontalLayout_3->addWidget(checkBox_mpu6050datalive);
 
@@ -2013,9 +2023,7 @@ public:
         checkBox_accx_graph = new QCheckBox(frame);
         checkBox_accx_graph->setObjectName("checkBox_accx_graph");
         checkBox_accx_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/Icon/Resources/Icons/chart-histogram w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        checkBox_accx_graph->setIcon(icon5);
+        checkBox_accx_graph->setIcon(icon4);
 
         horizontalLayout_3->addWidget(checkBox_accx_graph);
 
@@ -2063,7 +2071,7 @@ public:
         checkBox_accy_graph = new QCheckBox(frame_2);
         checkBox_accy_graph->setObjectName("checkBox_accy_graph");
         checkBox_accy_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        checkBox_accy_graph->setIcon(icon5);
+        checkBox_accy_graph->setIcon(icon4);
 
         horizontalLayout_5->addWidget(checkBox_accy_graph);
 
@@ -2111,7 +2119,7 @@ public:
         checkBox_accz_graph = new QCheckBox(frame_3);
         checkBox_accz_graph->setObjectName("checkBox_accz_graph");
         checkBox_accz_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        checkBox_accz_graph->setIcon(icon5);
+        checkBox_accz_graph->setIcon(icon4);
 
         horizontalLayout_6->addWidget(checkBox_accz_graph);
 
@@ -2161,7 +2169,7 @@ public:
         checkBox_gyrox_graph = new QCheckBox(frame_4);
         checkBox_gyrox_graph->setObjectName("checkBox_gyrox_graph");
         checkBox_gyrox_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        checkBox_gyrox_graph->setIcon(icon5);
+        checkBox_gyrox_graph->setIcon(icon4);
 
         horizontalLayout_9->addWidget(checkBox_gyrox_graph);
 
@@ -2209,7 +2217,7 @@ public:
         checkBox_gyroy_graph = new QCheckBox(frame_5);
         checkBox_gyroy_graph->setObjectName("checkBox_gyroy_graph");
         checkBox_gyroy_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        checkBox_gyroy_graph->setIcon(icon5);
+        checkBox_gyroy_graph->setIcon(icon4);
 
         horizontalLayout_10->addWidget(checkBox_gyroy_graph);
 
@@ -2257,7 +2265,7 @@ public:
         checkBox_gyroz_graph = new QCheckBox(frame_6);
         checkBox_gyroz_graph->setObjectName("checkBox_gyroz_graph");
         checkBox_gyroz_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        checkBox_gyroz_graph->setIcon(icon5);
+        checkBox_gyroz_graph->setIcon(icon4);
 
         horizontalLayout_11->addWidget(checkBox_gyroz_graph);
 
@@ -2457,7 +2465,7 @@ public:
 
         retranslateUi(QtUISBR);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(QtUISBR);
@@ -2489,21 +2497,21 @@ public:
         pushButton_clear->setText(QCoreApplication::translate("QtUISBR", "Clear", nullptr));
         pushButton_clear_2->setText(QCoreApplication::translate("QtUISBR", "Clear", nullptr));
         label_8->setText(QCoreApplication::translate("QtUISBR", "Line Follower 1", nullptr));
-        checkBox_hcsr_7->setText(QString());
+        checkBox_IR1->setText(QString());
         label_11->setText(QCoreApplication::translate("QtUISBR", "Line Follower 2", nullptr));
-        checkBox_hcsr_10->setText(QString());
+        checkBox_IR2->setText(QString());
         label_13->setText(QCoreApplication::translate("QtUISBR", "Line Follower 3", nullptr));
-        checkBox_hcsr_12->setText(QString());
+        checkBox_IR3->setText(QString());
         label_15->setText(QCoreApplication::translate("QtUISBR", "Line Follower 4", nullptr));
-        checkBox_hcsr_14->setText(QString());
+        checkBox_IR4->setText(QString());
         label_9->setText(QCoreApplication::translate("QtUISBR", "Wall Detector 1", nullptr));
-        checkBox_hcsr_8->setText(QString());
+        checkBox_IR5->setText(QString());
         label_10->setText(QCoreApplication::translate("QtUISBR", "Wall Detector 2", nullptr));
-        checkBox_hcsr_9->setText(QString());
+        checkBox_IR6->setText(QString());
         label_12->setText(QCoreApplication::translate("QtUISBR", "Wall Detector 3", nullptr));
-        checkBox_hcsr_11->setText(QString());
+        checkBox_IR7->setText(QString());
         label_14->setText(QCoreApplication::translate("QtUISBR", "Wall Detector 4", nullptr));
-        checkBox_hcsr_13->setText(QString());
+        checkBox_IR8->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(ir), QCoreApplication::translate("QtUISBR", "IR", nullptr));
         label_33->setText(QCoreApplication::translate("QtUISBR", "Left Motor", nullptr));
         checkBox_hcsr_32->setText(QString());

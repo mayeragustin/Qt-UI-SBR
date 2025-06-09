@@ -77,10 +77,20 @@ QtUISBR::~QtUISBR()
 
 void QtUISBR::OnQTimer1()
 {
-    buffer[0] = MPUBLOCK;
-    SendCMD(buffer, 1);
+    if(ui->pushButton_live->isChecked()){
+        if(ui->checkBox_mpu6050datalive->isChecked()){
+            buffer[0] = MPUBLOCK;
+            SendCMD(buffer, 1);
+        }
+        if(ui->checkBox_IRdatalive->isChecked()){
+            buffer[0] = ADCBLOCK;
+            SendCMD(buffer, 1);
+        }
+        graphtimer++;
+    }
 
-    graphtimer++;
+
+
 }
 
 void QtUISBR::SendCMD(uint8_t *buf, uint8_t length){
@@ -273,6 +283,14 @@ void QtUISBR::DecodeCmd(uint8_t *rxBuf){
         }
         break;
     case ADCBLOCK:
+        for(uint8_t i=0; i<8; i++){
+            w.u8[0] = rxBuf[i*2];
+            w.u8[1] = rxBuf[i*2 + 1];
+            ADCLCDlist[i]->display(w.u16[0]);
+        }
+        w.u8[0] = rxBuf[17];
+        w.u8[1] = rxBuf[18];
+        ui->progressBar_battery->setValue((float)w.u16[0] * (100.0f / 4095.0f));
         break;
     case USERTEXT:
         w.u8[0] = rxBuf[1];

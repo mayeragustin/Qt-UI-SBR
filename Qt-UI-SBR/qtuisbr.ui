@@ -693,7 +693,7 @@ QTabBar::tab:!selected {
 </string>
          </property>
          <property name="currentIndex">
-          <number>3</number>
+          <number>0</number>
          </property>
          <property name="elideMode">
           <enum>Qt::TextElideMode::ElideNone</enum>
@@ -724,7 +724,21 @@ QTabBar::tab:!selected {
                </property>
                <layout class="QGridLayout" name="gridLayout_9" rowstretch="1,0,10">
                 <item row="0" column="0">
-                 <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,0">
+                 <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="0,1,0">
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_IRdatalive">
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/display-arrow-down.png</normaloff>:/Icon/Resources/Icons/display-arrow-down.png</iconset>
+                    </property>
+                   </widget>
+                  </item>
                   <item alignment="Qt::AlignmentFlag::AlignHCenter">
                    <widget class="QLabel" name="label_8">
                     <property name="font">
@@ -742,12 +756,16 @@ QTabBar::tab:!selected {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_hcsr_7">
+                   <widget class="QCheckBox" name="checkBox_IR1">
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -818,12 +836,16 @@ QTabBar::tab:!selected {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_hcsr_10">
+                   <widget class="QCheckBox" name="checkBox_IR2">
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -894,12 +916,16 @@ QTabBar::tab:!selected {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_hcsr_12">
+                   <widget class="QCheckBox" name="checkBox_IR3">
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1001,12 +1027,16 @@ QTabBar::tab:!selected {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_hcsr_14">
+                   <widget class="QCheckBox" name="checkBox_IR4">
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1050,12 +1080,16 @@ QTabBar::tab:!selected {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_hcsr_8">
+                   <widget class="QCheckBox" name="checkBox_IR5">
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1126,12 +1160,16 @@ QTabBar::tab:!selected {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_hcsr_9">
+                   <widget class="QCheckBox" name="checkBox_IR6">
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1202,12 +1240,16 @@ QTabBar::tab:!selected {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_hcsr_11">
+                   <widget class="QCheckBox" name="checkBox_IR7">
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1278,12 +1320,16 @@ QTabBar::tab:!selected {
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_hcsr_13">
+                   <widget class="QCheckBox" name="checkBox_IR8">
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1351,7 +1397,7 @@ QTabBar::tab:!selected {
                    </property>
                    <layout class="QGridLayout" name="gridLayout_37" rowstretch="1,0,10">
                     <item row="0" column="0">
-                     <layout class="QHBoxLayout" name="horizontalLayout_49" stretch="1,0">
+                     <layout class="QHBoxLayout" name="horizontalLayout_49" stretch="1">
                       <item alignment="Qt::AlignmentFlag::AlignHCenter">
                        <widget class="QLabel" name="label_33">
                         <property name="font">
@@ -1365,16 +1411,6 @@ QTabBar::tab:!selected {
                         </property>
                         <property name="text">
                          <string>Left Motor</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="checkBox_hcsr_32">
-                        <property name="cursor">
-                         <cursorShape>PointingHandCursor</cursorShape>
-                        </property>
-                        <property name="text">
-                         <string/>
                         </property>
                        </widget>
                       </item>
@@ -1427,7 +1463,7 @@ QTabBar::tab:!selected {
                    </property>
                    <layout class="QGridLayout" name="gridLayout_38" rowstretch="1,0,10">
                     <item row="0" column="0">
-                     <layout class="QHBoxLayout" name="horizontalLayout_50" stretch="1,0">
+                     <layout class="QHBoxLayout" name="horizontalLayout_50" stretch="1">
                       <item alignment="Qt::AlignmentFlag::AlignHCenter">
                        <widget class="QLabel" name="label_34">
                         <property name="font">
@@ -1444,16 +1480,6 @@ QTabBar::tab:!selected {
                         </property>
                         <property name="text">
                          <string>Right Motor</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="checkBox_hcsr_33">
-                        <property name="cursor">
-                         <cursorShape>PointingHandCursor</cursorShape>
-                        </property>
-                        <property name="text">
-                         <string/>
                         </property>
                        </widget>
                       </item>
@@ -3327,6 +3353,11 @@ color: rgb(255, 255, 255);</string>
             </spacer>
            </item>
           </layout>
+         </widget>
+         <widget class="QWidget" name="graph">
+          <attribute name="title">
+           <string>Graph Conf</string>
+          </attribute>
          </widget>
         </widget>
        </item>
