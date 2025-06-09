@@ -38,32 +38,36 @@ QtUISBR::QtUISBR(QWidget *parent)
     };
     Q_UNUSED(ADCLCDlist);
 
-    serie = new QLineSeries();
-    serie->setName("Sensor");
-    grafico = new QChart();
-    grafico = new QChart();
-    grafico->addSeries(serie);
-    grafico->setTitle("Datos del Sensor en Tiempo Real");
 
-    // Ejes
-    ejeX = new QValueAxis;
-    ejeX->setTitleText("Tiempo (s)");
-    ejeX->setLabelFormat("%.1f");
-    ejeX->setTickCount(11); // Mostrar cada 5 segundos si son 60s totales
+    grafico = ui->widget;
 
-    ejeY = new QValueAxis;
-    ejeY->setTitleText("Valor Sensor");
-    ejeY->setRange(0, 100); // Ajusta estos valores según tus necesidades
+    grafico->setRangoEjeY(INT16_MIN, INT16_MAX);
 
-    grafico->setAxisX(ejeX, serie);
-    grafico->setAxisY(ejeY, serie);
-
-    // Vista del gráfico
-    QChartView *vista = new QChartView(grafico);
-    vista->setRenderHint(QPainter::Antialiasing);
-
-    // Asignar el chartView AL WIDGET — usando un layout, sí, pero es lo más directo
-    ui->frame_forGraph->layout()->addWidget(vista);
+    grafico->agregarSensor("Acc X", Qt::red);
+    connect(ui->checkBox_accx_graph, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Acc X", checked);
+    });
+    grafico->agregarSensor("Acc Y", Qt::blue);
+    connect(ui->checkBox_accy_graph, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Acc Y", checked);
+    });
+    grafico->agregarSensor("Acc Z", Qt::green);
+    connect(ui->checkBox_accz_graph, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Acc Z", checked);
+    });
+    grafico->agregarSensor("Gyro X", Qt::yellow);
+    connect(ui->checkBox_gyrox_graph, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Gyro X", checked);
+    });
+    grafico->agregarSensor("Gyro Y", Qt::magenta);
+    connect(ui->checkBox_gyroy_graph, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Gyro Y", checked);
+    });
+    grafico->agregarSensor("Gyro Z", Qt::cyan);
+    connect(ui->checkBox_gyroz_graph, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Gyro Z", checked);
+    });
+    // Luego, en tu timer o donde recibas datos:
 }
 
 QtUISBR::~QtUISBR()
@@ -73,28 +77,10 @@ QtUISBR::~QtUISBR()
 
 void QtUISBR::OnQTimer1()
 {
-    //buffer[0] = MPUBLOCK;
-    //SendCMD(buffer, 1);
-    // Simula un valor del sensor entre 0 y 100
-    qreal valorY = rand() % 100;
+    buffer[0] = MPUBLOCK;
+    SendCMD(buffer, 1);
 
-    // Agregar punto al gráfico
-    serie->append(x, valorY);
-
-    // Limitar a los últimos 60 segundos
-    const int duracionMaxima = 60; // segundos
-    while (x - serie->at(0).x() > duracionMaxima) {
-        serie->removePoints(0, 1);
-    }
-
-    // Actualizar eje X dinámicamente
-    if (x >= duracionMaxima) {
-        ejeX->setRange(x - duracionMaxima, x);
-    } else {
-        ejeX->setRange(0, duracionMaxima);
-    }
-
-    x += 1; // Incrementa el tiempo en 1 segundo
+    graphtimer++;
 }
 
 void QtUISBR::SendCMD(uint8_t *buf, uint8_t length){
@@ -328,31 +314,37 @@ void QtUISBR::DecodeCmd(uint8_t *rxBuf){
         w.u8[1] = rxBuf[2];
         Car.MPU6050.Acc.x = w.i16[0];
         ui->lcdNumber_accx->display(Car.MPU6050.Acc.x);
-        qDebug() << w.i16[0];
+        grafico->actualizarSensor("Acc X", Car.MPU6050.Acc.x, graphtimer);
+
         w.u8[0] = rxBuf[3];
         w.u8[1] = rxBuf[4];
         Car.MPU6050.Acc.y = w.i16[0];
         ui->lcdNumber_accy->display(Car.MPU6050.Acc.y);
+        grafico->actualizarSensor("Acc Y", Car.MPU6050.Acc.y, graphtimer);
 
         w.u8[0] = rxBuf[5];
         w.u8[1] = rxBuf[6];
         Car.MPU6050.Acc.z = w.i16[0];
         ui->lcdNumber_accz->display(Car.MPU6050.Acc.z);
+        grafico->actualizarSensor("Acc Z", Car.MPU6050.Acc.z, graphtimer);
 
         w.u8[0] = rxBuf[7];
         w.u8[1] = rxBuf[8];
         Car.MPU6050.Gyro.x = w.i16[0];
         ui->lcdNumber_gyrox->display(Car.MPU6050.Gyro.x);
+        grafico->actualizarSensor("Gyro X", Car.MPU6050.Gyro.x, graphtimer);
 
         w.u8[0] = rxBuf[9];
         w.u8[1] = rxBuf[10];
         Car.MPU6050.Gyro.y = w.i16[0];
         ui->lcdNumber_gyroy->display(Car.MPU6050.Gyro.y);
+        grafico->actualizarSensor("Gyro Y", Car.MPU6050.Gyro.y, graphtimer);
 
         w.u8[0] = rxBuf[11];
         w.u8[1] = rxBuf[12];
         Car.MPU6050.Gyro.z = w.i16[0];
         ui->lcdNumber_gyroz->display(Car.MPU6050.Gyro.z);
+        grafico->actualizarSensor("Gyro Z", Car.MPU6050.Gyro.z, graphtimer);
 
         dt = (double)(clock() - last_time) / CLOCKS_PER_SEC;
         last_time = clock();

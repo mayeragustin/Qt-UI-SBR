@@ -1,6 +1,7 @@
 #ifndef QTUISBR_H
 #define QTUISBR_H
 
+#include "sensorchart.h"
 #include <QMainWindow>
 #include <QtSerialPort/QSerialPort>
 #include <QSerialPortInfo>
@@ -149,12 +150,9 @@ private:
 
     QLCDNumber *ADCLCDlist[8];
 
-    QLineSeries *serie;
-    QChart *grafico;
-    QValueAxis *ejeX;
-    QValueAxis *ejeY;
 
-    qreal x = 0;
+    SensorChart *grafico;
+    time_t graphtimer = 0;
 
 };
 #endif // QTUISBR_H

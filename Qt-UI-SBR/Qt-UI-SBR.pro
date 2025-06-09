@@ -10,12 +10,12 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    qplotsensors.cpp \
-    qtuisbr.cpp
+    qtuisbr.cpp \
+    sensorchart.cpp
 
 HEADERS += \
-    qplotsensors.h \
-    qtuisbr.h
+    qtuisbr.h \
+    sensorchart.h
 
 FORMS += \
     qtuisbr.ui

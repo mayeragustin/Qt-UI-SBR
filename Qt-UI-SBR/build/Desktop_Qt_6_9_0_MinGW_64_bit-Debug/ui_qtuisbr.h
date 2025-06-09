@@ -30,6 +30,7 @@
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "sensorchart.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -73,9 +74,9 @@ public:
     QPushButton *pushButton_clear_2;
     QFrame *frame_forGraph;
     QGridLayout *gridLayout_23;
-    QWidget *widgetDondeQuieroElChart;
+    SensorChart *widget;
     QFrame *frame_36;
-    QGridLayout *gridLayout_41;
+    QGridLayout *gridLayout_40;
     QTabWidget *tabWidget;
     QWidget *ir;
     QGridLayout *gridLayout_18;
@@ -254,22 +255,23 @@ public:
     QFrame *frame;
     QGridLayout *gridLayout_2;
     QHBoxLayout *horizontalLayout_3;
+    QCheckBox *checkBox_mpu6050datalive;
     QLabel *label;
-    QCheckBox *checkBox_hcsr;
+    QCheckBox *checkBox_accx_graph;
     QFrame *line_3;
     QLCDNumber *lcdNumber_accx;
     QFrame *frame_2;
     QGridLayout *gridLayout_3;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_3;
-    QCheckBox *checkBox_hcsr_2;
+    QCheckBox *checkBox_accy_graph;
     QFrame *line_4;
     QLCDNumber *lcdNumber_accy;
     QFrame *frame_3;
     QGridLayout *gridLayout_4;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_4;
-    QCheckBox *checkBox_hcsr_3;
+    QCheckBox *checkBox_accz_graph;
     QFrame *line_5;
     QLCDNumber *lcdNumber_accz;
     QHBoxLayout *horizontalLayout_8;
@@ -277,21 +279,21 @@ public:
     QGridLayout *gridLayout_5;
     QHBoxLayout *horizontalLayout_9;
     QLabel *label_5;
-    QCheckBox *checkBox_hcsr_4;
+    QCheckBox *checkBox_gyrox_graph;
     QFrame *line_6;
     QLCDNumber *lcdNumber_gyrox;
     QFrame *frame_5;
     QGridLayout *gridLayout_6;
     QHBoxLayout *horizontalLayout_10;
     QLabel *label_6;
-    QCheckBox *checkBox_hcsr_5;
+    QCheckBox *checkBox_gyroy_graph;
     QFrame *line_7;
     QLCDNumber *lcdNumber_gyroy;
     QFrame *frame_6;
     QGridLayout *gridLayout_7;
     QHBoxLayout *horizontalLayout_11;
     QLabel *label_7;
-    QCheckBox *checkBox_hcsr_6;
+    QCheckBox *checkBox_gyroz_graph;
     QFrame *line_8;
     QLCDNumber *lcdNumber_gyroz;
     QWidget *pid;
@@ -696,16 +698,10 @@ public:
         gridLayout_23->setObjectName("gridLayout_23");
         gridLayout_23->setSizeConstraint(QLayout::SizeConstraint::SetMaximumSize);
         gridLayout_23->setContentsMargins(0, 0, 0, 0);
-        widgetDondeQuieroElChart = new QWidget(frame_forGraph);
-        widgetDondeQuieroElChart->setObjectName("widgetDondeQuieroElChart");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Maximum);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(widgetDondeQuieroElChart->sizePolicy().hasHeightForWidth());
-        widgetDondeQuieroElChart->setSizePolicy(sizePolicy1);
-        widgetDondeQuieroElChart->setMinimumSize(QSize(0, 0));
+        widget = new SensorChart(frame_forGraph);
+        widget->setObjectName("widget");
 
-        gridLayout_23->addWidget(widgetDondeQuieroElChart, 0, 0, 1, 1);
+        gridLayout_23->addWidget(widget, 0, 0, 1, 1);
 
 
         horizontalLayout_15->addWidget(frame_forGraph);
@@ -720,10 +716,8 @@ public:
         frame_36->setStyleSheet(QString::fromUtf8("background-color: rgb(20, 31, 41);"));
         frame_36->setFrameShape(QFrame::Shape::StyledPanel);
         frame_36->setFrameShadow(QFrame::Shadow::Raised);
-        gridLayout_41 = new QGridLayout(frame_36);
-        gridLayout_41->setSpacing(3);
-        gridLayout_41->setObjectName("gridLayout_41");
-        gridLayout_41->setContentsMargins(6, 6, 6, 6);
+        gridLayout_40 = new QGridLayout(frame_36);
+        gridLayout_40->setObjectName("gridLayout_40");
         tabWidget = new QTabWidget(frame_36);
         tabWidget->setObjectName("tabWidget");
         tabWidget->setFont(font);
@@ -2001,19 +1995,31 @@ public:
         gridLayout_2->setObjectName("gridLayout_2");
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
+        checkBox_mpu6050datalive = new QCheckBox(frame);
+        checkBox_mpu6050datalive->setObjectName("checkBox_mpu6050datalive");
+        checkBox_mpu6050datalive->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/Icon/Resources/Icons/display-arrow-down.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        checkBox_mpu6050datalive->setIcon(icon4);
+
+        horizontalLayout_3->addWidget(checkBox_mpu6050datalive);
+
         label = new QLabel(frame);
         label->setObjectName("label");
         label->setFont(font4);
 
         horizontalLayout_3->addWidget(label, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr = new QCheckBox(frame);
-        checkBox_hcsr->setObjectName("checkBox_hcsr");
-        checkBox_hcsr->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_accx_graph = new QCheckBox(frame);
+        checkBox_accx_graph->setObjectName("checkBox_accx_graph");
+        checkBox_accx_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/Icon/Resources/Icons/chart-histogram w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        checkBox_accx_graph->setIcon(icon5);
 
-        horizontalLayout_3->addWidget(checkBox_hcsr);
+        horizontalLayout_3->addWidget(checkBox_accx_graph);
 
-        horizontalLayout_3->setStretch(0, 1);
+        horizontalLayout_3->setStretch(1, 1);
 
         gridLayout_2->addLayout(horizontalLayout_3, 0, 0, 1, 1);
 
@@ -2054,11 +2060,12 @@ public:
 
         horizontalLayout_5->addWidget(label_3, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_2 = new QCheckBox(frame_2);
-        checkBox_hcsr_2->setObjectName("checkBox_hcsr_2");
-        checkBox_hcsr_2->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_accy_graph = new QCheckBox(frame_2);
+        checkBox_accy_graph->setObjectName("checkBox_accy_graph");
+        checkBox_accy_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_accy_graph->setIcon(icon5);
 
-        horizontalLayout_5->addWidget(checkBox_hcsr_2);
+        horizontalLayout_5->addWidget(checkBox_accy_graph);
 
         horizontalLayout_5->setStretch(0, 1);
 
@@ -2101,11 +2108,12 @@ public:
 
         horizontalLayout_6->addWidget(label_4, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_3 = new QCheckBox(frame_3);
-        checkBox_hcsr_3->setObjectName("checkBox_hcsr_3");
-        checkBox_hcsr_3->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_accz_graph = new QCheckBox(frame_3);
+        checkBox_accz_graph->setObjectName("checkBox_accz_graph");
+        checkBox_accz_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_accz_graph->setIcon(icon5);
 
-        horizontalLayout_6->addWidget(checkBox_hcsr_3);
+        horizontalLayout_6->addWidget(checkBox_accz_graph);
 
         horizontalLayout_6->setStretch(0, 1);
 
@@ -2150,11 +2158,12 @@ public:
 
         horizontalLayout_9->addWidget(label_5, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_4 = new QCheckBox(frame_4);
-        checkBox_hcsr_4->setObjectName("checkBox_hcsr_4");
-        checkBox_hcsr_4->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_gyrox_graph = new QCheckBox(frame_4);
+        checkBox_gyrox_graph->setObjectName("checkBox_gyrox_graph");
+        checkBox_gyrox_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_gyrox_graph->setIcon(icon5);
 
-        horizontalLayout_9->addWidget(checkBox_hcsr_4);
+        horizontalLayout_9->addWidget(checkBox_gyrox_graph);
 
         horizontalLayout_9->setStretch(0, 1);
 
@@ -2197,11 +2206,12 @@ public:
 
         horizontalLayout_10->addWidget(label_6, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_5 = new QCheckBox(frame_5);
-        checkBox_hcsr_5->setObjectName("checkBox_hcsr_5");
-        checkBox_hcsr_5->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_gyroy_graph = new QCheckBox(frame_5);
+        checkBox_gyroy_graph->setObjectName("checkBox_gyroy_graph");
+        checkBox_gyroy_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_gyroy_graph->setIcon(icon5);
 
-        horizontalLayout_10->addWidget(checkBox_hcsr_5);
+        horizontalLayout_10->addWidget(checkBox_gyroy_graph);
 
         horizontalLayout_10->setStretch(0, 1);
 
@@ -2244,11 +2254,12 @@ public:
 
         horizontalLayout_11->addWidget(label_7, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        checkBox_hcsr_6 = new QCheckBox(frame_6);
-        checkBox_hcsr_6->setObjectName("checkBox_hcsr_6");
-        checkBox_hcsr_6->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_gyroz_graph = new QCheckBox(frame_6);
+        checkBox_gyroz_graph->setObjectName("checkBox_gyroz_graph");
+        checkBox_gyroz_graph->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        checkBox_gyroz_graph->setIcon(icon5);
 
-        horizontalLayout_11->addWidget(checkBox_hcsr_6);
+        horizontalLayout_11->addWidget(checkBox_gyroz_graph);
 
         horizontalLayout_11->setStretch(0, 1);
 
@@ -2331,11 +2342,11 @@ public:
 
         lineEdit_firm_2 = new QLineEdit(frame_17);
         lineEdit_firm_2->setObjectName("lineEdit_firm_2");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(lineEdit_firm_2->sizePolicy().hasHeightForWidth());
-        lineEdit_firm_2->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(lineEdit_firm_2->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_2->setSizePolicy(sizePolicy1);
         lineEdit_firm_2->setMinimumSize(QSize(0, 24));
         lineEdit_firm_2->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
 "background-color: rgb(97, 108, 117);\n"
@@ -2374,8 +2385,8 @@ public:
 
         lineEdit_firm_3 = new QLineEdit(frame_18);
         lineEdit_firm_3->setObjectName("lineEdit_firm_3");
-        sizePolicy2.setHeightForWidth(lineEdit_firm_3->sizePolicy().hasHeightForWidth());
-        lineEdit_firm_3->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(lineEdit_firm_3->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_3->setSizePolicy(sizePolicy1);
         lineEdit_firm_3->setMinimumSize(QSize(0, 24));
         lineEdit_firm_3->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
 "background-color: rgb(97, 108, 117);\n"
@@ -2414,8 +2425,8 @@ public:
 
         lineEdit_firm_4 = new QLineEdit(frame_19);
         lineEdit_firm_4->setObjectName("lineEdit_firm_4");
-        sizePolicy2.setHeightForWidth(lineEdit_firm_4->sizePolicy().hasHeightForWidth());
-        lineEdit_firm_4->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(lineEdit_firm_4->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_4->setSizePolicy(sizePolicy1);
         lineEdit_firm_4->setMinimumSize(QSize(0, 24));
         lineEdit_firm_4->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
 "background-color: rgb(97, 108, 117);\n"
@@ -2437,7 +2448,7 @@ public:
 
         tabWidget->addTab(pid, QString());
 
-        gridLayout_41->addWidget(tabWidget, 0, 0, 1, 1);
+        gridLayout_40->addWidget(tabWidget, 0, 0, 1, 1);
 
 
         gridLayout_24->addWidget(frame_36, 2, 0, 1, 1);
@@ -2446,7 +2457,7 @@ public:
 
         retranslateUi(QtUISBR);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(QtUISBR);
@@ -2524,18 +2535,19 @@ public:
         label_27->setText(QCoreApplication::translate("QtUISBR", "Pos Z", nullptr));
         checkBox_hcsr_26->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(odo), QCoreApplication::translate("QtUISBR", "Odometry", nullptr));
+        checkBox_mpu6050datalive->setText(QString());
         label->setText(QCoreApplication::translate("QtUISBR", "Aceleraci\303\263n X", nullptr));
-        checkBox_hcsr->setText(QString());
+        checkBox_accx_graph->setText(QString());
         label_3->setText(QCoreApplication::translate("QtUISBR", "Aceleraci\303\263n Y", nullptr));
-        checkBox_hcsr_2->setText(QString());
+        checkBox_accy_graph->setText(QString());
         label_4->setText(QCoreApplication::translate("QtUISBR", "Aceleraci\303\263n Z", nullptr));
-        checkBox_hcsr_3->setText(QString());
+        checkBox_accz_graph->setText(QString());
         label_5->setText(QCoreApplication::translate("QtUISBR", "Giroscopio X", nullptr));
-        checkBox_hcsr_4->setText(QString());
+        checkBox_gyrox_graph->setText(QString());
         label_6->setText(QCoreApplication::translate("QtUISBR", "Giroscopio Y", nullptr));
-        checkBox_hcsr_5->setText(QString());
+        checkBox_gyroy_graph->setText(QString());
         label_7->setText(QCoreApplication::translate("QtUISBR", "Giroscopio Z", nullptr));
-        checkBox_hcsr_6->setText(QString());
+        checkBox_gyroz_graph->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(mpu), QCoreApplication::translate("QtUISBR", "MPU6050", nullptr));
         radioButton->setText(QCoreApplication::translate("QtUISBR", "RadioButton", nullptr));
         radioButton_2->setText(QCoreApplication::translate("QtUISBR", "RadioButton", nullptr));
