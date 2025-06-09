@@ -15,7 +15,6 @@
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLCDNumber>
@@ -38,7 +37,7 @@ class Ui_QtUISBR
 {
 public:
     QWidget *centralwidget;
-    QGridLayout *gridLayout_40;
+    QGridLayout *gridLayout_24;
     QFrame *frame_14;
     QGridLayout *gridLayout_8;
     QHBoxLayout *horizontalLayout_13;
@@ -55,6 +54,7 @@ public:
     QLabel *label_41;
     QComboBox *comboBox_com;
     QPushButton *pushButton_open;
+    QHBoxLayout *horizontalLayout_15;
     QFrame *frame_13;
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
@@ -71,7 +71,9 @@ public:
     QHBoxLayout *horizontalLayout_52;
     QPushButton *pushButton_clear;
     QPushButton *pushButton_clear_2;
-    QGraphicsView *graphicsView;
+    QFrame *frame_forGraph;
+    QGridLayout *gridLayout_23;
+    QWidget *widgetDondeQuieroElChart;
     QFrame *frame_36;
     QGridLayout *gridLayout_41;
     QTabWidget *tabWidget;
@@ -294,30 +296,29 @@ public:
     QLCDNumber *lcdNumber_gyroz;
     QWidget *pid;
     QGridLayout *gridLayout_22;
-    QHBoxLayout *horizontalLayout_15;
     QVBoxLayout *verticalLayout_5;
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
     QRadioButton *radioButton_3;
     QRadioButton *radioButton_4;
-    QSpacerItem *horizontalSpacer_6;
-    QVBoxLayout *verticalLayout_9;
     QFrame *frame_17;
     QGridLayout *gridLayout_10;
     QVBoxLayout *verticalLayout_6;
     QLabel *label_43;
     QLineEdit *lineEdit_firm_2;
+    QSpacerItem *horizontalSpacer_3;
     QFrame *frame_18;
     QGridLayout *gridLayout_19;
     QVBoxLayout *verticalLayout_7;
     QLabel *label_44;
     QLineEdit *lineEdit_firm_3;
+    QSpacerItem *horizontalSpacer_4;
     QFrame *frame_19;
     QGridLayout *gridLayout_20;
     QVBoxLayout *verticalLayout_8;
     QLabel *label_45;
     QLineEdit *lineEdit_firm_4;
-    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *horizontalSpacer_5;
 
     void setupUi(QMainWindow *QtUISBR)
     {
@@ -332,8 +333,8 @@ public:
 "color: rgb(255, 255, 255);"));
         centralwidget = new QWidget(QtUISBR);
         centralwidget->setObjectName("centralwidget");
-        gridLayout_40 = new QGridLayout(centralwidget);
-        gridLayout_40->setObjectName("gridLayout_40");
+        gridLayout_24 = new QGridLayout(centralwidget);
+        gridLayout_24->setObjectName("gridLayout_24");
         frame_14 = new QFrame(centralwidget);
         frame_14->setObjectName("frame_14");
         frame_14->setStyleSheet(QString::fromUtf8("background-color: rgb(20, 31, 41);\n"
@@ -477,15 +478,14 @@ public:
 "            QPushButton:pressed {\n"
 "                color: #41A3F2;\n"
 "            }"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Icon/Resources/Icons/usb-pendrive w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_open->setIcon(icon);
 
         gridLayout_8->addWidget(pushButton_open, 0, 5, 1, 1);
 
 
-        gridLayout_40->addWidget(frame_14, 0, 0, 1, 2);
+        gridLayout_24->addWidget(frame_14, 0, 0, 1, 1);
 
+        horizontalLayout_15 = new QHBoxLayout();
+        horizontalLayout_15->setObjectName("horizontalLayout_15");
         frame_13 = new QFrame(centralwidget);
         frame_13->setObjectName("frame_13");
         frame_13->setStyleSheet(QString::fromUtf8("background-color: rgb(20, 31, 41);"));
@@ -530,9 +530,9 @@ public:
 "            QPushButton:pressed {\n"
 "                background-color: rgb(66, 184, 126);\n"
 "            }"));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/Icon/Resources/Icons/paper-plane-top b.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_send->setIcon(icon1);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Iconos/resources/enviar.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_send->setIcon(icon);
 
         horizontalLayout_4->addWidget(pushButton_send);
 
@@ -564,9 +564,9 @@ public:
 "QPushButton:checked {\n"
 "                color: #41A3F2;\n"
 "            }"));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/Icon/Resources/Icons/chart-histogram w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_live->setIcon(icon2);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Iconos/resources/transferencia-de-datos.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_live->setIcon(icon1);
         pushButton_live->setCheckable(true);
 
         horizontalLayout_4->addWidget(pushButton_live);
@@ -596,9 +596,9 @@ public:
 "QPushButton:checked {\n"
 "                 color: #41A3F2;\n"
 "            }"));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/Icon/Resources/Icons/marker w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_confWifi->setIcon(icon3);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/Iconos/resources/wifi.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_confWifi->setIcon(icon2);
 
         horizontalLayout_4->addWidget(pushButton_confWifi);
 
@@ -649,9 +649,9 @@ public:
 "            QPushButton:hover {\n"
 "                background-color: #ff5853;\n"
 "            }"));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/Iconos/resources/eliminar.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_clear->setIcon(icon4);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/Iconos/resources/eliminar.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_clear->setIcon(icon3);
 
         horizontalLayout_52->addWidget(pushButton_clear);
 
@@ -669,7 +669,7 @@ public:
 "            QPushButton:hover {\n"
 "                background-color: #ff5853;\n"
 "            }"));
-        pushButton_clear_2->setIcon(icon4);
+        pushButton_clear_2->setIcon(icon3);
 
         horizontalLayout_52->addWidget(pushButton_clear_2);
 
@@ -680,13 +680,40 @@ public:
         gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
 
 
-        gridLayout_40->addWidget(frame_13, 1, 0, 1, 1);
+        horizontalLayout_15->addWidget(frame_13);
 
-        graphicsView = new QGraphicsView(centralwidget);
-        graphicsView->setObjectName("graphicsView");
-        graphicsView->setStyleSheet(QString::fromUtf8("background-color: rgb(20, 31, 41);"));
+        frame_forGraph = new QFrame(centralwidget);
+        frame_forGraph->setObjectName("frame_forGraph");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(frame_forGraph->sizePolicy().hasHeightForWidth());
+        frame_forGraph->setSizePolicy(sizePolicy);
+        frame_forGraph->setStyleSheet(QString::fromUtf8("background-color: rgb(20, 31, 41);"));
+        frame_forGraph->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_forGraph->setFrameShadow(QFrame::Shadow::Raised);
+        gridLayout_23 = new QGridLayout(frame_forGraph);
+        gridLayout_23->setObjectName("gridLayout_23");
+        gridLayout_23->setSizeConstraint(QLayout::SizeConstraint::SetMaximumSize);
+        gridLayout_23->setContentsMargins(0, 0, 0, 0);
+        widgetDondeQuieroElChart = new QWidget(frame_forGraph);
+        widgetDondeQuieroElChart->setObjectName("widgetDondeQuieroElChart");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Maximum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(widgetDondeQuieroElChart->sizePolicy().hasHeightForWidth());
+        widgetDondeQuieroElChart->setSizePolicy(sizePolicy1);
+        widgetDondeQuieroElChart->setMinimumSize(QSize(0, 0));
 
-        gridLayout_40->addWidget(graphicsView, 1, 1, 1, 1);
+        gridLayout_23->addWidget(widgetDondeQuieroElChart, 0, 0, 1, 1);
+
+
+        horizontalLayout_15->addWidget(frame_forGraph);
+
+        horizontalLayout_15->setStretch(0, 1);
+        horizontalLayout_15->setStretch(1, 2);
+
+        gridLayout_24->addLayout(horizontalLayout_15, 1, 0, 1, 1);
 
         frame_36 = new QFrame(centralwidget);
         frame_36->setObjectName("frame_36");
@@ -2260,8 +2287,6 @@ public:
         pid->setObjectName("pid");
         gridLayout_22 = new QGridLayout(pid);
         gridLayout_22->setObjectName("gridLayout_22");
-        horizontalLayout_15 = new QHBoxLayout();
-        horizontalLayout_15->setObjectName("horizontalLayout_15");
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName("verticalLayout_5");
         radioButton = new QRadioButton(pid);
@@ -2285,14 +2310,8 @@ public:
         verticalLayout_5->addWidget(radioButton_4);
 
 
-        horizontalLayout_15->addLayout(verticalLayout_5);
+        gridLayout_22->addLayout(verticalLayout_5, 0, 0, 3, 1);
 
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_15->addItem(horizontalSpacer_6);
-
-        verticalLayout_9 = new QVBoxLayout();
-        verticalLayout_9->setObjectName("verticalLayout_9");
         frame_17 = new QFrame(pid);
         frame_17->setObjectName("frame_17");
         frame_17->setStyleSheet(QString::fromUtf8("background-color: rgb(40, 60, 79);"));
@@ -2312,11 +2331,11 @@ public:
 
         lineEdit_firm_2 = new QLineEdit(frame_17);
         lineEdit_firm_2->setObjectName("lineEdit_firm_2");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(lineEdit_firm_2->sizePolicy().hasHeightForWidth());
-        lineEdit_firm_2->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(lineEdit_firm_2->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_2->setSizePolicy(sizePolicy2);
         lineEdit_firm_2->setMinimumSize(QSize(0, 24));
         lineEdit_firm_2->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
 "background-color: rgb(97, 108, 117);\n"
@@ -2330,7 +2349,11 @@ public:
         gridLayout_10->addLayout(verticalLayout_6, 0, 0, 1, 1);
 
 
-        verticalLayout_9->addWidget(frame_17);
+        gridLayout_22->addWidget(frame_17, 0, 1, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_22->addItem(horizontalSpacer_3, 0, 2, 1, 1);
 
         frame_18 = new QFrame(pid);
         frame_18->setObjectName("frame_18");
@@ -2351,8 +2374,8 @@ public:
 
         lineEdit_firm_3 = new QLineEdit(frame_18);
         lineEdit_firm_3->setObjectName("lineEdit_firm_3");
-        sizePolicy.setHeightForWidth(lineEdit_firm_3->sizePolicy().hasHeightForWidth());
-        lineEdit_firm_3->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(lineEdit_firm_3->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_3->setSizePolicy(sizePolicy2);
         lineEdit_firm_3->setMinimumSize(QSize(0, 24));
         lineEdit_firm_3->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
 "background-color: rgb(97, 108, 117);\n"
@@ -2366,7 +2389,11 @@ public:
         gridLayout_19->addLayout(verticalLayout_7, 0, 0, 1, 1);
 
 
-        verticalLayout_9->addWidget(frame_18);
+        gridLayout_22->addWidget(frame_18, 1, 1, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_22->addItem(horizontalSpacer_4, 1, 2, 1, 1);
 
         frame_19 = new QFrame(pid);
         frame_19->setObjectName("frame_19");
@@ -2387,8 +2414,8 @@ public:
 
         lineEdit_firm_4 = new QLineEdit(frame_19);
         lineEdit_firm_4->setObjectName("lineEdit_firm_4");
-        sizePolicy.setHeightForWidth(lineEdit_firm_4->sizePolicy().hasHeightForWidth());
-        lineEdit_firm_4->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(lineEdit_firm_4->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_4->setSizePolicy(sizePolicy2);
         lineEdit_firm_4->setMinimumSize(QSize(0, 24));
         lineEdit_firm_4->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
 "background-color: rgb(97, 108, 117);\n"
@@ -2402,34 +2429,24 @@ public:
         gridLayout_20->addLayout(verticalLayout_8, 0, 0, 1, 1);
 
 
-        verticalLayout_9->addWidget(frame_19);
+        gridLayout_22->addWidget(frame_19, 2, 1, 1, 1);
 
+        horizontalSpacer_5 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        horizontalLayout_15->addLayout(verticalLayout_9);
-
-        horizontalSpacer_4 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_15->addItem(horizontalSpacer_4);
-
-        horizontalLayout_15->setStretch(0, 1);
-        horizontalLayout_15->setStretch(1, 1);
-        horizontalLayout_15->setStretch(2, 2);
-        horizontalLayout_15->setStretch(3, 4);
-
-        gridLayout_22->addLayout(horizontalLayout_15, 0, 0, 1, 1);
+        gridLayout_22->addItem(horizontalSpacer_5, 2, 2, 1, 1);
 
         tabWidget->addTab(pid, QString());
 
         gridLayout_41->addWidget(tabWidget, 0, 0, 1, 1);
 
 
-        gridLayout_40->addWidget(frame_36, 2, 0, 1, 2);
+        gridLayout_24->addWidget(frame_36, 2, 0, 1, 1);
 
         QtUISBR->setCentralWidget(centralwidget);
 
         retranslateUi(QtUISBR);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(QtUISBR);

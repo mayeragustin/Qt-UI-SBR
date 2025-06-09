@@ -7,6 +7,31 @@
 *****************************************************************************/
 
 #include "../../../qtuisbr.h"
+#include <QtGui/qtextcursor.h>
+#include <QtGui/qscreen.h>
+#include <QtCharts/qlineseries.h>
+#include <QtCharts/qabstractbarseries.h>
+#include <QtCharts/qvbarmodelmapper.h>
+#include <QtCharts/qboxplotseries.h>
+#include <QtCharts/qcandlestickseries.h>
+#include <QtCore/qabstractitemmodel.h>
+#include <QtCharts/qpieseries.h>
+#include <QtCore/qabstractitemmodel.h>
+#include <QtCharts/qboxplotseries.h>
+#include <QtCore/qabstractitemmodel.h>
+#include <QtCharts/qpieseries.h>
+#include <QtCharts/qpieseries.h>
+#include <QtCore/qabstractitemmodel.h>
+#include <QtCharts/qxyseries.h>
+#include <QtCharts/qxyseries.h>
+#include <QtCore/qabstractitemmodel.h>
+#include <QtCore/qabstractitemmodel.h>
+#include <QtCharts/qboxplotseries.h>
+#include <QtCore/qabstractitemmodel.h>
+#include <QtCharts/qpieseries.h>
+#include <QtCore/qabstractitemmodel.h>
+#include <QtCharts/qxyseries.h>
+#include <QtCore/qabstractitemmodel.h>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -40,12 +65,30 @@ template <> constexpr inline auto QtUISBR::qt_create_metaobjectdata<qt_meta_tag_
     QtMocHelpers::StringRefStorage qt_stringData {
         "QtUISBR",
         "on_pushButton_open_clicked",
-        ""
+        "",
+        "on_pushButton_clear_clicked",
+        "on_pushButton_clear_2_clicked",
+        "on_lineEdit_editingFinished",
+        "on_lineEdit_2_editingFinished",
+        "on_verticalSlider_sliderReleased",
+        "on_verticalSlider_2_sliderReleased"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Slot 'on_pushButton_open_clicked'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButton_clear_clicked'
+        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButton_clear_2_clicked'
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_lineEdit_editingFinished'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_lineEdit_2_editingFinished'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_verticalSlider_sliderReleased'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_verticalSlider_2_sliderReleased'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -70,6 +113,12 @@ void QtUISBR::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->on_pushButton_open_clicked(); break;
+        case 1: _t->on_pushButton_clear_clicked(); break;
+        case 2: _t->on_pushButton_clear_2_clicked(); break;
+        case 3: _t->on_lineEdit_editingFinished(); break;
+        case 4: _t->on_lineEdit_2_editingFinished(); break;
+        case 5: _t->on_verticalSlider_sliderReleased(); break;
+        case 6: _t->on_verticalSlider_2_sliderReleased(); break;
         default: ;
         }
     }
@@ -95,14 +144,14 @@ int QtUISBR::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 7;
     }
     return _id;
 }

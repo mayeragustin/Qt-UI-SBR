@@ -427,7 +427,10 @@ Makefile: ../../Qt-UI-SBR.pro D:/Qt/6.9.0/mingw_64/mkspecs/win32-g++/qmake.conf 
 		D:/Qt/6.9.0/mingw_64/mkspecs/features/yacc.prf \
 		D:/Qt/6.9.0/mingw_64/mkspecs/features/lex.prf \
 		../../Qt-UI-SBR.pro \
+		D:/Qt/6.9.0/mingw_64/lib/Qt6Charts.prl \
+		D:/Qt/6.9.0/mingw_64/lib/Qt6OpenGLWidgets.prl \
 		D:/Qt/6.9.0/mingw_64/lib/Qt6Widgets.prl \
+		D:/Qt/6.9.0/mingw_64/lib/Qt6OpenGL.prl \
 		D:/Qt/6.9.0/mingw_64/lib/Qt6Gui.prl \
 		D:/Qt/6.9.0/mingw_64/lib/Qt6SerialPort.prl \
 		D:/Qt/6.9.0/mingw_64/lib/Qt6Core.prl \
@@ -792,7 +795,10 @@ D:/Qt/6.9.0/mingw_64/mkspecs/features/exceptions.prf:
 D:/Qt/6.9.0/mingw_64/mkspecs/features/yacc.prf:
 D:/Qt/6.9.0/mingw_64/mkspecs/features/lex.prf:
 ../../Qt-UI-SBR.pro:
+D:/Qt/6.9.0/mingw_64/lib/Qt6Charts.prl:
+D:/Qt/6.9.0/mingw_64/lib/Qt6OpenGLWidgets.prl:
 D:/Qt/6.9.0/mingw_64/lib/Qt6Widgets.prl:
+D:/Qt/6.9.0/mingw_64/lib/Qt6OpenGL.prl:
 D:/Qt/6.9.0/mingw_64/lib/Qt6Gui.prl:
 D:/Qt/6.9.0/mingw_64/lib/Qt6SerialPort.prl:
 D:/Qt/6.9.0/mingw_64/lib/Qt6Core.prl:

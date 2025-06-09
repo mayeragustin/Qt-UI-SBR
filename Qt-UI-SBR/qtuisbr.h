@@ -8,6 +8,10 @@
 #include <QTimer>
 #include <QLCDNumber>
 
+#include <QtCore>
+#include <QtGui>
+#include <QtCharts/QtCharts>
+
 #define RAD_TO_DEG 57.295779513f
 
 #define LMotor          Motors[0]
@@ -144,5 +148,13 @@ private:
     float gyroRateY = 0, gyroRateX = 0;
 
     QLCDNumber *ADCLCDlist[8];
+
+    QLineSeries *serie;
+    QChart *grafico;
+    QValueAxis *ejeX;
+    QValueAxis *ejeY;
+
+    qreal x = 0;
+
 };
 #endif // QTUISBR_H

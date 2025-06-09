@@ -24,8 +24,8 @@ border-radius:10px;
 color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_40">
-    <item row="0" column="0" colspan="2">
+   <layout class="QGridLayout" name="gridLayout_24">
+    <item row="0" column="0">
      <widget class="QFrame" name="frame_14">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(20, 31, 41);
@@ -257,78 +257,76 @@ background-color: rgb(97, 108, 117);</string>
          <property name="text">
           <string>Open</string>
          </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/Icon/Resources/Icons/usb-pendrive w.png</normaloff>:/Icon/Resources/Icons/usb-pendrive w.png</iconset>
-         </property>
         </widget>
        </item>
       </layout>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QFrame" name="frame_13">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(20, 31, 41);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Shadow::Sunken</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="2,1,2,1,0,1">
+     <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,2">
+      <item>
+       <widget class="QFrame" name="frame_13">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(20, 31, 41);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Sunken</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout">
            <item>
-            <widget class="QComboBox" name="comboBox_command">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>11</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-color: rgb(64, 64, 64);
+            <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="2,1,2,1,0,1">
+             <item>
+              <widget class="QComboBox" name="comboBox_command">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Louis George Cafe</family>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-color: rgb(64, 64, 64);
 color: rgb(255, 255, 255);
 background-color: rgb(97, 108, 117);</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_send">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enviar comando seleccionado&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_send">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Louis George Cafe</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enviar comando seleccionado&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
                 background-color: rgb(64, 64, 64);
                 color: rgb(255, 255, 255);
                 border: none;
@@ -342,46 +340,46 @@ background-color: rgb(97, 108, 117);</string>
             QPushButton:pressed {
                 background-color: rgb(66, 184, 126);
             }</string>
-             </property>
-             <property name="text">
-              <string>Enviar</string>
-             </property>
-             <property name="icon">
-              <iconset resource="resources.qrc">
-               <normaloff>:/Icon/Resources/Icons/paper-plane-top b.png</normaloff>:/Icon/Resources/Icons/paper-plane-top b.png</iconset>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Orientation::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_live">
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>13</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Iniciar los datos en vivo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
+               </property>
+               <property name="text">
+                <string>Enviar</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/Iconos/resources/enviar.png</normaloff>:/Iconos/resources/enviar.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_live">
+               <property name="font">
+                <font>
+                 <family>Louis George Cafe</family>
+                 <pointsize>13</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Iniciar los datos en vivo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
                 background-color: rgba(255, 255, 255, 0);
                 
 				
@@ -401,49 +399,49 @@ background-color: rgb(97, 108, 117);</string>
 QPushButton:checked {
                 color: #41A3F2;
             }</string>
-             </property>
-             <property name="text">
-              <string>Datos en Vivo</string>
-             </property>
-             <property name="icon">
-              <iconset resource="resources.qrc">
-               <normaloff>:/Icon/Resources/Icons/chart-histogram w.png</normaloff>:/Icon/Resources/Icons/chart-histogram w.png</iconset>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_7">
-             <property name="orientation">
-              <enum>Qt::Orientation::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_confWifi">
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>13</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abrir pagina para configurar WiFi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
+               </property>
+               <property name="text">
+                <string>Datos en Vivo</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/Iconos/resources/transferencia-de-datos.png</normaloff>:/Iconos/resources/transferencia-de-datos.png</iconset>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_confWifi">
+               <property name="font">
+                <font>
+                 <family>Louis George Cafe</family>
+                 <pointsize>13</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abrir pagina para configurar WiFi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
                 background-color: rgba(255, 255, 255, 0);
                 color: rgb(255, 255, 255);
                 border: none;
@@ -460,78 +458,78 @@ QPushButton:checked {
 QPushButton:checked {
                  color: #41A3F2;
             }</string>
-             </property>
-             <property name="text">
-              <string>Trajectory</string>
-             </property>
-             <property name="icon">
-              <iconset resource="resources.qrc">
-               <normaloff>:/Icon/Resources/Icons/marker w.png</normaloff>:/Icon/Resources/Icons/marker w.png</iconset>
-             </property>
-            </widget>
+               </property>
+               <property name="text">
+                <string>Trajectory</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/Iconos/resources/wifi.png</normaloff>:/Iconos/resources/wifi.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
-            <widget class="QPlainTextEdit" name="plainTextEdit_2">
-             <property name="minimumSize">
-              <size>
-               <width>228</width>
-               <height>142</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(0, 0, 0);
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QPlainTextEdit" name="plainTextEdit_2">
+               <property name="minimumSize">
+                <size>
+                 <width>228</width>
+                 <height>142</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 0);
 background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="readOnly">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPlainTextEdit" name="plainTextEdit">
-             <property name="minimumSize">
-              <size>
-               <width>228</width>
-               <height>142</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(0, 0, 0);
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="plainTextEdit">
+               <property name="minimumSize">
+                <size>
+                 <width>228</width>
+                 <height>142</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 0);
 background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="readOnly">
-              <bool>true</bool>
-             </property>
-            </widget>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_52">
            <item>
-            <widget class="QPushButton" name="pushButton_clear">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>11</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
+            <layout class="QHBoxLayout" name="horizontalLayout_52">
+             <item>
+              <widget class="QPushButton" name="pushButton_clear">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Louis George Cafe</family>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
                 color: rgb(255, 255, 255);
                 background-color: rgb(64, 64, 64);
                 border-radius: 4px;
@@ -540,36 +538,36 @@ background-color: rgb(255, 255, 255);</string>
             QPushButton:hover {
                 background-color: #ff5853;
             }</string>
-             </property>
-             <property name="text">
-              <string>Clear</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>:/Iconos/resources/eliminar.png</normaloff>:/Iconos/resources/eliminar.png</iconset>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_clear_2">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>11</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
+               </property>
+               <property name="text">
+                <string>Clear</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/Iconos/resources/eliminar.png</normaloff>:/Iconos/resources/eliminar.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_clear_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Louis George Cafe</family>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
                 color: rgb(255, 255, 255);
                 background-color: rgb(64, 64, 64);
                 border-radius: 4px;
@@ -578,31 +576,78 @@ background-color: rgb(255, 255, 255);</string>
             QPushButton:hover {
                 background-color: #ff5853;
             }</string>
-             </property>
-             <property name="text">
-              <string>Clear</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>:/Iconos/resources/eliminar.png</normaloff>:/Iconos/resources/eliminar.png</iconset>
-             </property>
-            </widget>
+               </property>
+               <property name="text">
+                <string>Clear</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/Iconos/resources/eliminar.png</normaloff>:/Iconos/resources/eliminar.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </item>
         </layout>
-       </item>
-      </layout>
-     </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_forGraph">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(20, 31, 41);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_23">
+         <property name="sizeConstraint">
+          <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QWidget" name="widgetDondeQuieroElChart" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </item>
-    <item row="1" column="1">
-     <widget class="QGraphicsView" name="graphicsView">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(20, 31, 41);</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0" colspan="2">
+    <item row="2" column="0">
      <widget class="QFrame" name="frame_36">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(20, 31, 41);</string>
@@ -3011,260 +3056,265 @@ border-radius:5px;</string>
            <string>PID</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_22">
-           <item row="0" column="0">
-            <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,1,2,4">
+           <item row="0" column="0" rowspan="3">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_5">
-               <item>
-                <widget class="QRadioButton" name="radioButton">
-                 <property name="text">
-                  <string>RadioButton</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="radioButton_2">
-                 <property name="text">
-                  <string>RadioButton</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="radioButton_3">
-                 <property name="text">
-                  <string>RadioButton</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="radioButton_4">
-                 <property name="text">
-                  <string>RadioButton</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
+              <widget class="QRadioButton" name="radioButton">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
              </item>
              <item>
-              <spacer name="horizontalSpacer_6">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
+              <widget class="QRadioButton" name="radioButton_2">
+               <property name="text">
+                <string>RadioButton</string>
                </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
+              </widget>
              </item>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_9">
-               <item>
-                <widget class="QFrame" name="frame_17">
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(40, 60, 79);</string>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::Shape::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Shadow::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_10">
-                  <item row="0" column="0">
-                   <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,1">
-                    <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                     <widget class="QLabel" name="label_43">
-                      <property name="font">
-                       <font>
-                        <family>Louis George Cafe</family>
-                        <pointsize>11</pointsize>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">color: rgb(255, 255, 255);</string>
-                      </property>
-                      <property name="text">
-                       <string>Proporcional</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLineEdit" name="lineEdit_firm_2">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-radius: 10;
-background-color: rgb(97, 108, 117);
-color: rgb(255, 255, 255);</string>
-                      </property>
-                      <property name="readOnly">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frame_18">
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(40, 60, 79);</string>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::Shape::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Shadow::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_19">
-                  <item row="0" column="0">
-                   <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,1">
-                    <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                     <widget class="QLabel" name="label_44">
-                      <property name="font">
-                       <font>
-                        <family>Louis George Cafe</family>
-                        <pointsize>11</pointsize>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">color: rgb(255, 255, 255);</string>
-                      </property>
-                      <property name="text">
-                       <string>Integrativo</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLineEdit" name="lineEdit_firm_3">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-radius: 10;
-background-color: rgb(97, 108, 117);
-color: rgb(255, 255, 255);</string>
-                      </property>
-                      <property name="readOnly">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frame_19">
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(40, 60, 79);</string>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::Shape::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Shadow::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_20">
-                  <item row="0" column="0">
-                   <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,1">
-                    <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                     <widget class="QLabel" name="label_45">
-                      <property name="font">
-                       <font>
-                        <family>Louis George Cafe</family>
-                        <pointsize>11</pointsize>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">color: rgb(255, 255, 255);</string>
-                      </property>
-                      <property name="text">
-                       <string>Derivativo</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLineEdit" name="lineEdit_firm_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-radius: 10;
-background-color: rgb(97, 108, 117);
-color: rgb(255, 255, 255);</string>
-                      </property>
-                      <property name="readOnly">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
+              <widget class="QRadioButton" name="radioButton_3">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
              </item>
              <item>
-              <spacer name="horizontalSpacer_4">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
+              <widget class="QRadioButton" name="radioButton_4">
+               <property name="text">
+                <string>RadioButton</string>
                </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>526</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
+              </widget>
              </item>
             </layout>
+           </item>
+           <item row="0" column="1">
+            <widget class="QFrame" name="frame_17">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(40, 60, 79);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,1">
+                <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                 <widget class="QLabel" name="label_43">
+                  <property name="font">
+                   <font>
+                    <family>Louis George Cafe</family>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Proporcional</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_firm_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 10;
+background-color: rgb(97, 108, 117);
+color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>526</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QFrame" name="frame_18">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(40, 60, 79);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_19">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,1">
+                <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                 <widget class="QLabel" name="label_44">
+                  <property name="font">
+                   <font>
+                    <family>Louis George Cafe</family>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Integrativo</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_firm_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 10;
+background-color: rgb(97, 108, 117);
+color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>526</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QFrame" name="frame_19">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(40, 60, 79);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_20">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,1">
+                <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                 <widget class="QLabel" name="label_45">
+                  <property name="font">
+                   <font>
+                    <family>Louis George Cafe</family>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Derivativo</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_firm_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 10;
+background-color: rgb(97, 108, 117);
+color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>526</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>
@@ -3276,8 +3326,6 @@ color: rgb(255, 255, 255);</string>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

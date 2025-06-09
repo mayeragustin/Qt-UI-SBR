@@ -37,6 +37,33 @@ QtUISBR::QtUISBR(QWidget *parent)
         ui->lcdNumber_WD4
     };
     Q_UNUSED(ADCLCDlist);
+
+    serie = new QLineSeries();
+    serie->setName("Sensor");
+    grafico = new QChart();
+    grafico = new QChart();
+    grafico->addSeries(serie);
+    grafico->setTitle("Datos del Sensor en Tiempo Real");
+
+    // Ejes
+    ejeX = new QValueAxis;
+    ejeX->setTitleText("Tiempo (s)");
+    ejeX->setLabelFormat("%.1f");
+    ejeX->setTickCount(11); // Mostrar cada 5 segundos si son 60s totales
+
+    ejeY = new QValueAxis;
+    ejeY->setTitleText("Valor Sensor");
+    ejeY->setRange(0, 100); // Ajusta estos valores según tus necesidades
+
+    grafico->setAxisX(ejeX, serie);
+    grafico->setAxisY(ejeY, serie);
+
+    // Vista del gráfico
+    QChartView *vista = new QChartView(grafico);
+    vista->setRenderHint(QPainter::Antialiasing);
+
+    // Asignar el chartView AL WIDGET — usando un layout, sí, pero es lo más directo
+    ui->frame_forGraph->layout()->addWidget(vista);
 }
 
 QtUISBR::~QtUISBR()
@@ -46,8 +73,28 @@ QtUISBR::~QtUISBR()
 
 void QtUISBR::OnQTimer1()
 {
-    buffer[0] = MPUBLOCK;
-    SendCMD(buffer, 1);
+    //buffer[0] = MPUBLOCK;
+    //SendCMD(buffer, 1);
+    // Simula un valor del sensor entre 0 y 100
+    qreal valorY = rand() % 100;
+
+    // Agregar punto al gráfico
+    serie->append(x, valorY);
+
+    // Limitar a los últimos 60 segundos
+    const int duracionMaxima = 60; // segundos
+    while (x - serie->at(0).x() > duracionMaxima) {
+        serie->removePoints(0, 1);
+    }
+
+    // Actualizar eje X dinámicamente
+    if (x >= duracionMaxima) {
+        ejeX->setRange(x - duracionMaxima, x);
+    } else {
+        ejeX->setRange(0, duracionMaxima);
+    }
+
+    x += 1; // Incrementa el tiempo en 1 segundo
 }
 
 void QtUISBR::SendCMD(uint8_t *buf, uint8_t length){
@@ -394,14 +441,10 @@ void QtUISBR::on_pushButton_clear_clicked()
     ui->plainTextEdit->clear();
 }
 
-
-
-
 void QtUISBR::on_pushButton_clear_2_clicked()
 {
     ui->plainTextEdit_2->clear();
 }
-
 
 void QtUISBR::on_lineEdit_editingFinished()
 {
@@ -411,7 +454,6 @@ void QtUISBR::on_lineEdit_editingFinished()
     }
 }
 
-
 void QtUISBR::on_lineEdit_2_editingFinished()
 {
     int32_t val = ui->lineEdit_2->text().toInt();
@@ -419,7 +461,6 @@ void QtUISBR::on_lineEdit_2_editingFinished()
         ui->verticalSlider->setValue(val);
     }
 }
-
 
 void QtUISBR::on_verticalSlider_sliderReleased()
 {
@@ -430,7 +471,6 @@ void QtUISBR::on_verticalSlider_sliderReleased()
     buffer[2] = val;
     SendCMD(buffer, 3);
 }
-
 
 void QtUISBR::on_verticalSlider_2_sliderReleased()
 {
