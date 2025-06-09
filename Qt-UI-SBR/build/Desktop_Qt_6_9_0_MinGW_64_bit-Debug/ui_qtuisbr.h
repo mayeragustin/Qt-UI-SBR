@@ -25,6 +25,7 @@
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTabWidget>
@@ -39,15 +40,16 @@ public:
     QWidget *centralwidget;
     QGridLayout *gridLayout_40;
     QFrame *frame_14;
-    QGridLayout *gridLayout_10;
-    QHBoxLayout *horizontalLayout_15;
+    QGridLayout *gridLayout_8;
     QHBoxLayout *horizontalLayout_13;
     QLabel *label_2;
     QLineEdit *lineEdit_firm;
     QHBoxLayout *horizontalLayout_14;
     QLabel *label_40;
     QLineEdit *lineEdit_mode;
-    QProgressBar *progressBar;
+    QHBoxLayout *horizontalLayout_7;
+    QLabel *label_42;
+    QProgressBar *progressBar_battery;
     QSpacerItem *horizontalSpacer;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_41;
@@ -82,24 +84,24 @@ public:
     QLabel *label_8;
     QCheckBox *checkBox_hcsr_7;
     QFrame *line_9;
-    QLCDNumber *lcdNumber_7;
+    QLCDNumber *lcdNumber_LF1;
     QFrame *frame_10;
     QGridLayout *gridLayout_13;
     QHBoxLayout *horizontalLayout_18;
     QLabel *label_11;
     QCheckBox *checkBox_hcsr_10;
     QFrame *line_12;
-    QLCDNumber *lcdNumber_10;
+    QLCDNumber *lcdNumber_LF2;
     QFrame *frame_12;
     QGridLayout *gridLayout_15;
     QHBoxLayout *horizontalLayout_20;
     QLabel *label_13;
     QCheckBox *checkBox_hcsr_12;
     QFrame *line_14;
-    QLCDNumber *lcdNumber_12;
+    QLCDNumber *lcdNumber_LF3;
     QFrame *frame_16;
     QGridLayout *gridLayout_17;
-    QLCDNumber *lcdNumber_14;
+    QLCDNumber *lcdNumber_LF4;
     QFrame *line_16;
     QHBoxLayout *horizontalLayout_22;
     QLabel *label_15;
@@ -111,28 +113,28 @@ public:
     QLabel *label_9;
     QCheckBox *checkBox_hcsr_8;
     QFrame *line_10;
-    QLCDNumber *lcdNumber_8;
+    QLCDNumber *lcdNumber_WD1;
     QFrame *frame_9;
     QGridLayout *gridLayout_12;
     QHBoxLayout *horizontalLayout_17;
     QLabel *label_10;
     QCheckBox *checkBox_hcsr_9;
     QFrame *line_11;
-    QLCDNumber *lcdNumber_9;
+    QLCDNumber *lcdNumber_WD2;
     QFrame *frame_11;
     QGridLayout *gridLayout_14;
     QHBoxLayout *horizontalLayout_19;
     QLabel *label_12;
     QCheckBox *checkBox_hcsr_11;
     QFrame *line_13;
-    QLCDNumber *lcdNumber_11;
+    QLCDNumber *lcdNumber_WD3;
     QFrame *frame_15;
     QGridLayout *gridLayout_16;
     QHBoxLayout *horizontalLayout_21;
     QLabel *label_14;
     QCheckBox *checkBox_hcsr_13;
     QFrame *line_15;
-    QLCDNumber *lcdNumber_13;
+    QLCDNumber *lcdNumber_WD4;
     QWidget *motors;
     QGridLayout *gridLayout_39;
     QHBoxLayout *horizontalLayout_51;
@@ -185,21 +187,21 @@ public:
     QLabel *label_22;
     QCheckBox *checkBox_hcsr_21;
     QFrame *line_23;
-    QLCDNumber *lcdNumber_21;
+    QLCDNumber *lcdNumber_Roll;
     QFrame *frame_24;
     QGridLayout *gridLayout_26;
     QHBoxLayout *horizontalLayout_35;
     QLabel *label_23;
     QCheckBox *checkBox_hcsr_22;
     QFrame *line_24;
-    QLCDNumber *lcdNumber_22;
+    QLCDNumber *lcdNumber_Pitch;
     QFrame *frame_25;
     QGridLayout *gridLayout_27;
     QHBoxLayout *horizontalLayout_36;
     QLabel *label_24;
     QCheckBox *checkBox_hcsr_23;
     QFrame *line_25;
-    QLCDNumber *lcdNumber_23;
+    QLCDNumber *lcdNumber_Yaw;
     QHBoxLayout *horizontalLayout_41;
     QFrame *frame_29;
     QGridLayout *gridLayout_31;
@@ -253,21 +255,21 @@ public:
     QLabel *label;
     QCheckBox *checkBox_hcsr;
     QFrame *line_3;
-    QLCDNumber *lcdNumber;
+    QLCDNumber *lcdNumber_accx;
     QFrame *frame_2;
     QGridLayout *gridLayout_3;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_3;
     QCheckBox *checkBox_hcsr_2;
     QFrame *line_4;
-    QLCDNumber *lcdNumber_2;
+    QLCDNumber *lcdNumber_accy;
     QFrame *frame_3;
     QGridLayout *gridLayout_4;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_4;
     QCheckBox *checkBox_hcsr_3;
     QFrame *line_5;
-    QLCDNumber *lcdNumber_3;
+    QLCDNumber *lcdNumber_accz;
     QHBoxLayout *horizontalLayout_8;
     QFrame *frame_4;
     QGridLayout *gridLayout_5;
@@ -275,21 +277,46 @@ public:
     QLabel *label_5;
     QCheckBox *checkBox_hcsr_4;
     QFrame *line_6;
-    QLCDNumber *lcdNumber_4;
+    QLCDNumber *lcdNumber_gyrox;
     QFrame *frame_5;
     QGridLayout *gridLayout_6;
     QHBoxLayout *horizontalLayout_10;
     QLabel *label_6;
     QCheckBox *checkBox_hcsr_5;
     QFrame *line_7;
-    QLCDNumber *lcdNumber_5;
+    QLCDNumber *lcdNumber_gyroy;
     QFrame *frame_6;
     QGridLayout *gridLayout_7;
     QHBoxLayout *horizontalLayout_11;
     QLabel *label_7;
     QCheckBox *checkBox_hcsr_6;
     QFrame *line_8;
-    QLCDNumber *lcdNumber_6;
+    QLCDNumber *lcdNumber_gyroz;
+    QWidget *pid;
+    QGridLayout *gridLayout_22;
+    QVBoxLayout *verticalLayout_5;
+    QRadioButton *radioButton;
+    QRadioButton *radioButton_2;
+    QRadioButton *radioButton_3;
+    QRadioButton *radioButton_4;
+    QFrame *frame_17;
+    QGridLayout *gridLayout_10;
+    QVBoxLayout *verticalLayout_6;
+    QLabel *label_43;
+    QLineEdit *lineEdit_firm_2;
+    QSpacerItem *horizontalSpacer_3;
+    QFrame *frame_18;
+    QGridLayout *gridLayout_19;
+    QVBoxLayout *verticalLayout_7;
+    QLabel *label_44;
+    QLineEdit *lineEdit_firm_3;
+    QSpacerItem *horizontalSpacer_4;
+    QFrame *frame_19;
+    QGridLayout *gridLayout_20;
+    QVBoxLayout *verticalLayout_8;
+    QLabel *label_45;
+    QLineEdit *lineEdit_firm_4;
+    QSpacerItem *horizontalSpacer_5;
 
     void setupUi(QMainWindow *QtUISBR)
     {
@@ -312,10 +339,8 @@ public:
 "border-radius: 10;"));
         frame_14->setFrameShape(QFrame::Shape::Panel);
         frame_14->setFrameShadow(QFrame::Shadow::Raised);
-        gridLayout_10 = new QGridLayout(frame_14);
-        gridLayout_10->setObjectName("gridLayout_10");
-        horizontalLayout_15 = new QHBoxLayout();
-        horizontalLayout_15->setObjectName("horizontalLayout_15");
+        gridLayout_8 = new QGridLayout(frame_14);
+        gridLayout_8->setObjectName("gridLayout_8");
         horizontalLayout_13 = new QHBoxLayout();
         horizontalLayout_13->setObjectName("horizontalLayout_13");
         label_2 = new QLabel(frame_14);
@@ -343,7 +368,7 @@ public:
         horizontalLayout_13->setStretch(0, 1);
         horizontalLayout_13->setStretch(1, 3);
 
-        horizontalLayout_15->addLayout(horizontalLayout_13);
+        gridLayout_8->addLayout(horizontalLayout_13, 0, 0, 1, 1);
 
         horizontalLayout_14 = new QHBoxLayout();
         horizontalLayout_14->setObjectName("horizontalLayout_14");
@@ -367,12 +392,22 @@ public:
         horizontalLayout_14->setStretch(0, 1);
         horizontalLayout_14->setStretch(1, 2);
 
-        horizontalLayout_15->addLayout(horizontalLayout_14);
+        gridLayout_8->addLayout(horizontalLayout_14, 0, 1, 1, 1);
 
-        progressBar = new QProgressBar(frame_14);
-        progressBar->setObjectName("progressBar");
-        progressBar->setFont(font);
-        progressBar->setStyleSheet(QString::fromUtf8("QProgressBar {\n"
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName("horizontalLayout_7");
+        label_42 = new QLabel(frame_14);
+        label_42->setObjectName("label_42");
+        label_42->setFont(font1);
+        label_42->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        label_42->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        horizontalLayout_7->addWidget(label_42);
+
+        progressBar_battery = new QProgressBar(frame_14);
+        progressBar_battery->setObjectName("progressBar_battery");
+        progressBar_battery->setFont(font);
+        progressBar_battery->setStyleSheet(QString::fromUtf8("QProgressBar {\n"
 "   background-color: rgb(97, 108, 117);\n"
 "    border-radius: 10px;\n"
 "    text-align: center;\n"
@@ -381,13 +416,18 @@ public:
 "	border-radius: 10px;\n"
 "	background-color: rgb(65, 163, 242);\n"
 "}"));
-        progressBar->setValue(24);
+        progressBar_battery->setValue(24);
 
-        horizontalLayout_15->addWidget(progressBar);
+        horizontalLayout_7->addWidget(progressBar_battery);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        horizontalLayout_7->setStretch(0, 1);
+        horizontalLayout_7->setStretch(1, 3);
 
-        horizontalLayout_15->addItem(horizontalSpacer);
+        gridLayout_8->addLayout(horizontalLayout_7, 0, 2, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(216, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_8->addItem(horizontalSpacer, 0, 3, 1, 1);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
@@ -412,7 +452,7 @@ public:
         horizontalLayout_2->setStretch(0, 1);
         horizontalLayout_2->setStretch(1, 4);
 
-        horizontalLayout_15->addLayout(horizontalLayout_2);
+        gridLayout_8->addLayout(horizontalLayout_2, 0, 4, 1, 1);
 
         pushButton_open = new QPushButton(frame_14);
         pushButton_open->setObjectName("pushButton_open");
@@ -437,15 +477,7 @@ public:
 "                color: #41A3F2;\n"
 "            }"));
 
-        horizontalLayout_15->addWidget(pushButton_open);
-
-        horizontalLayout_15->setStretch(0, 2);
-        horizontalLayout_15->setStretch(1, 1);
-        horizontalLayout_15->setStretch(2, 2);
-        horizontalLayout_15->setStretch(3, 2);
-        horizontalLayout_15->setStretch(4, 4);
-
-        gridLayout_10->addLayout(horizontalLayout_15, 0, 0, 1, 1);
+        gridLayout_8->addWidget(pushButton_open, 0, 5, 1, 1);
 
 
         gridLayout_40->addWidget(frame_14, 0, 0, 1, 2);
@@ -551,14 +583,14 @@ public:
 "            }\n"
 "\n"
 "            QPushButton:hover {\n"
-"                color: #ff5853;\n"
+"                 color: #41A3F2;\n"
 "            }\n"
 "\n"
 "            QPushButton:pressed {\n"
-"                color: #ff5853;\n"
+"                 color: #41A3F2;\n"
 "            }\n"
 "QPushButton:checked {\n"
-"                color: #fd413c;\n"
+"                 color: #41A3F2;\n"
 "            }"));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/Iconos/resources/wifi.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
@@ -753,10 +785,10 @@ public:
 
         gridLayout_9->addWidget(line_9, 1, 0, 1, 1);
 
-        lcdNumber_7 = new QLCDNumber(frame_7);
-        lcdNumber_7->setObjectName("lcdNumber_7");
+        lcdNumber_LF1 = new QLCDNumber(frame_7);
+        lcdNumber_LF1->setObjectName("lcdNumber_LF1");
 
-        gridLayout_9->addWidget(lcdNumber_7, 2, 0, 1, 1);
+        gridLayout_9->addWidget(lcdNumber_LF1, 2, 0, 1, 1);
 
         gridLayout_9->setRowStretch(0, 1);
         gridLayout_9->setRowStretch(2, 10);
@@ -800,10 +832,10 @@ public:
 
         gridLayout_13->addWidget(line_12, 1, 0, 1, 1);
 
-        lcdNumber_10 = new QLCDNumber(frame_10);
-        lcdNumber_10->setObjectName("lcdNumber_10");
+        lcdNumber_LF2 = new QLCDNumber(frame_10);
+        lcdNumber_LF2->setObjectName("lcdNumber_LF2");
 
-        gridLayout_13->addWidget(lcdNumber_10, 2, 0, 1, 1);
+        gridLayout_13->addWidget(lcdNumber_LF2, 2, 0, 1, 1);
 
         gridLayout_13->setRowStretch(0, 1);
         gridLayout_13->setRowStretch(2, 10);
@@ -847,10 +879,10 @@ public:
 
         gridLayout_15->addWidget(line_14, 1, 0, 1, 1);
 
-        lcdNumber_12 = new QLCDNumber(frame_12);
-        lcdNumber_12->setObjectName("lcdNumber_12");
+        lcdNumber_LF3 = new QLCDNumber(frame_12);
+        lcdNumber_LF3->setObjectName("lcdNumber_LF3");
 
-        gridLayout_15->addWidget(lcdNumber_12, 2, 0, 1, 1);
+        gridLayout_15->addWidget(lcdNumber_LF3, 2, 0, 1, 1);
 
         gridLayout_15->setRowStretch(0, 1);
         gridLayout_15->setRowStretch(2, 10);
@@ -864,10 +896,10 @@ public:
         frame_16->setFrameShadow(QFrame::Shadow::Raised);
         gridLayout_17 = new QGridLayout(frame_16);
         gridLayout_17->setObjectName("gridLayout_17");
-        lcdNumber_14 = new QLCDNumber(frame_16);
-        lcdNumber_14->setObjectName("lcdNumber_14");
+        lcdNumber_LF4 = new QLCDNumber(frame_16);
+        lcdNumber_LF4->setObjectName("lcdNumber_LF4");
 
-        gridLayout_17->addWidget(lcdNumber_14, 2, 0, 1, 1);
+        gridLayout_17->addWidget(lcdNumber_LF4, 2, 0, 1, 1);
 
         line_16 = new QFrame(frame_16);
         line_16->setObjectName("line_16");
@@ -950,10 +982,10 @@ public:
 
         gridLayout_11->addWidget(line_10, 1, 0, 1, 1);
 
-        lcdNumber_8 = new QLCDNumber(frame_8);
-        lcdNumber_8->setObjectName("lcdNumber_8");
+        lcdNumber_WD1 = new QLCDNumber(frame_8);
+        lcdNumber_WD1->setObjectName("lcdNumber_WD1");
 
-        gridLayout_11->addWidget(lcdNumber_8, 2, 0, 1, 1);
+        gridLayout_11->addWidget(lcdNumber_WD1, 2, 0, 1, 1);
 
         gridLayout_11->setRowStretch(0, 1);
         gridLayout_11->setRowStretch(2, 10);
@@ -997,10 +1029,10 @@ public:
 
         gridLayout_12->addWidget(line_11, 1, 0, 1, 1);
 
-        lcdNumber_9 = new QLCDNumber(frame_9);
-        lcdNumber_9->setObjectName("lcdNumber_9");
+        lcdNumber_WD2 = new QLCDNumber(frame_9);
+        lcdNumber_WD2->setObjectName("lcdNumber_WD2");
 
-        gridLayout_12->addWidget(lcdNumber_9, 2, 0, 1, 1);
+        gridLayout_12->addWidget(lcdNumber_WD2, 2, 0, 1, 1);
 
         gridLayout_12->setRowStretch(0, 1);
         gridLayout_12->setRowStretch(2, 10);
@@ -1044,10 +1076,10 @@ public:
 
         gridLayout_14->addWidget(line_13, 1, 0, 1, 1);
 
-        lcdNumber_11 = new QLCDNumber(frame_11);
-        lcdNumber_11->setObjectName("lcdNumber_11");
+        lcdNumber_WD3 = new QLCDNumber(frame_11);
+        lcdNumber_WD3->setObjectName("lcdNumber_WD3");
 
-        gridLayout_14->addWidget(lcdNumber_11, 2, 0, 1, 1);
+        gridLayout_14->addWidget(lcdNumber_WD3, 2, 0, 1, 1);
 
         gridLayout_14->setRowStretch(0, 1);
         gridLayout_14->setRowStretch(2, 10);
@@ -1091,10 +1123,10 @@ public:
 
         gridLayout_16->addWidget(line_15, 1, 0, 1, 1);
 
-        lcdNumber_13 = new QLCDNumber(frame_15);
-        lcdNumber_13->setObjectName("lcdNumber_13");
+        lcdNumber_WD4 = new QLCDNumber(frame_15);
+        lcdNumber_WD4->setObjectName("lcdNumber_WD4");
 
-        gridLayout_16->addWidget(lcdNumber_13, 2, 0, 1, 1);
+        gridLayout_16->addWidget(lcdNumber_WD4, 2, 0, 1, 1);
 
         gridLayout_16->setRowStretch(0, 1);
         gridLayout_16->setRowStretch(2, 10);
@@ -1512,10 +1544,10 @@ public:
 
         gridLayout_25->addWidget(line_23, 1, 0, 1, 1);
 
-        lcdNumber_21 = new QLCDNumber(frame_23);
-        lcdNumber_21->setObjectName("lcdNumber_21");
+        lcdNumber_Roll = new QLCDNumber(frame_23);
+        lcdNumber_Roll->setObjectName("lcdNumber_Roll");
 
-        gridLayout_25->addWidget(lcdNumber_21, 2, 0, 1, 1);
+        gridLayout_25->addWidget(lcdNumber_Roll, 2, 0, 1, 1);
 
         gridLayout_25->setRowStretch(0, 1);
         gridLayout_25->setRowStretch(2, 10);
@@ -1559,10 +1591,10 @@ public:
 
         gridLayout_26->addWidget(line_24, 1, 0, 1, 1);
 
-        lcdNumber_22 = new QLCDNumber(frame_24);
-        lcdNumber_22->setObjectName("lcdNumber_22");
+        lcdNumber_Pitch = new QLCDNumber(frame_24);
+        lcdNumber_Pitch->setObjectName("lcdNumber_Pitch");
 
-        gridLayout_26->addWidget(lcdNumber_22, 2, 0, 1, 1);
+        gridLayout_26->addWidget(lcdNumber_Pitch, 2, 0, 1, 1);
 
         gridLayout_26->setRowStretch(0, 1);
         gridLayout_26->setRowStretch(2, 10);
@@ -1606,10 +1638,10 @@ public:
 
         gridLayout_27->addWidget(line_25, 1, 0, 1, 1);
 
-        lcdNumber_23 = new QLCDNumber(frame_25);
-        lcdNumber_23->setObjectName("lcdNumber_23");
+        lcdNumber_Yaw = new QLCDNumber(frame_25);
+        lcdNumber_Yaw->setObjectName("lcdNumber_Yaw");
 
-        gridLayout_27->addWidget(lcdNumber_23, 2, 0, 1, 1);
+        gridLayout_27->addWidget(lcdNumber_Yaw, 2, 0, 1, 1);
 
         gridLayout_27->setRowStretch(0, 1);
         gridLayout_27->setRowStretch(2, 10);
@@ -1966,10 +1998,10 @@ public:
 
         gridLayout_2->addWidget(line_3, 1, 0, 1, 1);
 
-        lcdNumber = new QLCDNumber(frame);
-        lcdNumber->setObjectName("lcdNumber");
+        lcdNumber_accx = new QLCDNumber(frame);
+        lcdNumber_accx->setObjectName("lcdNumber_accx");
 
-        gridLayout_2->addWidget(lcdNumber, 2, 0, 1, 1);
+        gridLayout_2->addWidget(lcdNumber_accx, 2, 0, 1, 1);
 
         gridLayout_2->setRowStretch(0, 1);
         gridLayout_2->setRowStretch(2, 10);
@@ -2013,10 +2045,10 @@ public:
 
         gridLayout_3->addWidget(line_4, 1, 0, 1, 1);
 
-        lcdNumber_2 = new QLCDNumber(frame_2);
-        lcdNumber_2->setObjectName("lcdNumber_2");
+        lcdNumber_accy = new QLCDNumber(frame_2);
+        lcdNumber_accy->setObjectName("lcdNumber_accy");
 
-        gridLayout_3->addWidget(lcdNumber_2, 2, 0, 1, 1);
+        gridLayout_3->addWidget(lcdNumber_accy, 2, 0, 1, 1);
 
         gridLayout_3->setRowStretch(0, 1);
         gridLayout_3->setRowStretch(2, 10);
@@ -2060,10 +2092,10 @@ public:
 
         gridLayout_4->addWidget(line_5, 1, 0, 1, 1);
 
-        lcdNumber_3 = new QLCDNumber(frame_3);
-        lcdNumber_3->setObjectName("lcdNumber_3");
+        lcdNumber_accz = new QLCDNumber(frame_3);
+        lcdNumber_accz->setObjectName("lcdNumber_accz");
 
-        gridLayout_4->addWidget(lcdNumber_3, 2, 0, 1, 1);
+        gridLayout_4->addWidget(lcdNumber_accz, 2, 0, 1, 1);
 
         gridLayout_4->setRowStretch(0, 1);
         gridLayout_4->setRowStretch(2, 10);
@@ -2109,10 +2141,10 @@ public:
 
         gridLayout_5->addWidget(line_6, 1, 0, 1, 1);
 
-        lcdNumber_4 = new QLCDNumber(frame_4);
-        lcdNumber_4->setObjectName("lcdNumber_4");
+        lcdNumber_gyrox = new QLCDNumber(frame_4);
+        lcdNumber_gyrox->setObjectName("lcdNumber_gyrox");
 
-        gridLayout_5->addWidget(lcdNumber_4, 2, 0, 1, 1);
+        gridLayout_5->addWidget(lcdNumber_gyrox, 2, 0, 1, 1);
 
         gridLayout_5->setRowStretch(0, 1);
         gridLayout_5->setRowStretch(2, 10);
@@ -2156,10 +2188,10 @@ public:
 
         gridLayout_6->addWidget(line_7, 1, 0, 1, 1);
 
-        lcdNumber_5 = new QLCDNumber(frame_5);
-        lcdNumber_5->setObjectName("lcdNumber_5");
+        lcdNumber_gyroy = new QLCDNumber(frame_5);
+        lcdNumber_gyroy->setObjectName("lcdNumber_gyroy");
 
-        gridLayout_6->addWidget(lcdNumber_5, 2, 0, 1, 1);
+        gridLayout_6->addWidget(lcdNumber_gyroy, 2, 0, 1, 1);
 
         gridLayout_6->setRowStretch(0, 1);
         gridLayout_6->setRowStretch(2, 10);
@@ -2203,10 +2235,10 @@ public:
 
         gridLayout_7->addWidget(line_8, 1, 0, 1, 1);
 
-        lcdNumber_6 = new QLCDNumber(frame_6);
-        lcdNumber_6->setObjectName("lcdNumber_6");
+        lcdNumber_gyroz = new QLCDNumber(frame_6);
+        lcdNumber_gyroz->setObjectName("lcdNumber_gyroz");
 
-        gridLayout_7->addWidget(lcdNumber_6, 2, 0, 1, 1);
+        gridLayout_7->addWidget(lcdNumber_gyroz, 2, 0, 1, 1);
 
         gridLayout_7->setRowStretch(0, 1);
         gridLayout_7->setRowStretch(2, 10);
@@ -2220,6 +2252,159 @@ public:
         gridLayout_21->addLayout(horizontalLayout_8, 1, 0, 1, 3);
 
         tabWidget->addTab(mpu, QString());
+        pid = new QWidget();
+        pid->setObjectName("pid");
+        gridLayout_22 = new QGridLayout(pid);
+        gridLayout_22->setObjectName("gridLayout_22");
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setObjectName("verticalLayout_5");
+        radioButton = new QRadioButton(pid);
+        radioButton->setObjectName("radioButton");
+
+        verticalLayout_5->addWidget(radioButton);
+
+        radioButton_2 = new QRadioButton(pid);
+        radioButton_2->setObjectName("radioButton_2");
+
+        verticalLayout_5->addWidget(radioButton_2);
+
+        radioButton_3 = new QRadioButton(pid);
+        radioButton_3->setObjectName("radioButton_3");
+
+        verticalLayout_5->addWidget(radioButton_3);
+
+        radioButton_4 = new QRadioButton(pid);
+        radioButton_4->setObjectName("radioButton_4");
+
+        verticalLayout_5->addWidget(radioButton_4);
+
+
+        gridLayout_22->addLayout(verticalLayout_5, 0, 0, 3, 1);
+
+        frame_17 = new QFrame(pid);
+        frame_17->setObjectName("frame_17");
+        frame_17->setStyleSheet(QString::fromUtf8("background-color: rgb(40, 60, 79);"));
+        frame_17->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_17->setFrameShadow(QFrame::Shadow::Raised);
+        gridLayout_10 = new QGridLayout(frame_17);
+        gridLayout_10->setObjectName("gridLayout_10");
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setObjectName("verticalLayout_6");
+        label_43 = new QLabel(frame_17);
+        label_43->setObjectName("label_43");
+        label_43->setFont(font1);
+        label_43->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        label_43->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        verticalLayout_6->addWidget(label_43, 0, Qt::AlignmentFlag::AlignHCenter);
+
+        lineEdit_firm_2 = new QLineEdit(frame_17);
+        lineEdit_firm_2->setObjectName("lineEdit_firm_2");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(lineEdit_firm_2->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_2->setSizePolicy(sizePolicy);
+        lineEdit_firm_2->setMinimumSize(QSize(0, 24));
+        lineEdit_firm_2->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
+"background-color: rgb(97, 108, 117);\n"
+"color: rgb(255, 255, 255);"));
+        lineEdit_firm_2->setReadOnly(false);
+
+        verticalLayout_6->addWidget(lineEdit_firm_2);
+
+        verticalLayout_6->setStretch(1, 1);
+
+        gridLayout_10->addLayout(verticalLayout_6, 0, 0, 1, 1);
+
+
+        gridLayout_22->addWidget(frame_17, 0, 1, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_22->addItem(horizontalSpacer_3, 0, 2, 1, 1);
+
+        frame_18 = new QFrame(pid);
+        frame_18->setObjectName("frame_18");
+        frame_18->setStyleSheet(QString::fromUtf8("background-color: rgb(40, 60, 79);"));
+        frame_18->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_18->setFrameShadow(QFrame::Shadow::Raised);
+        gridLayout_19 = new QGridLayout(frame_18);
+        gridLayout_19->setObjectName("gridLayout_19");
+        verticalLayout_7 = new QVBoxLayout();
+        verticalLayout_7->setObjectName("verticalLayout_7");
+        label_44 = new QLabel(frame_18);
+        label_44->setObjectName("label_44");
+        label_44->setFont(font1);
+        label_44->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        label_44->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        verticalLayout_7->addWidget(label_44, 0, Qt::AlignmentFlag::AlignHCenter);
+
+        lineEdit_firm_3 = new QLineEdit(frame_18);
+        lineEdit_firm_3->setObjectName("lineEdit_firm_3");
+        sizePolicy.setHeightForWidth(lineEdit_firm_3->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_3->setSizePolicy(sizePolicy);
+        lineEdit_firm_3->setMinimumSize(QSize(0, 24));
+        lineEdit_firm_3->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
+"background-color: rgb(97, 108, 117);\n"
+"color: rgb(255, 255, 255);"));
+        lineEdit_firm_3->setReadOnly(false);
+
+        verticalLayout_7->addWidget(lineEdit_firm_3);
+
+        verticalLayout_7->setStretch(1, 1);
+
+        gridLayout_19->addLayout(verticalLayout_7, 0, 0, 1, 1);
+
+
+        gridLayout_22->addWidget(frame_18, 1, 1, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_22->addItem(horizontalSpacer_4, 1, 2, 1, 1);
+
+        frame_19 = new QFrame(pid);
+        frame_19->setObjectName("frame_19");
+        frame_19->setStyleSheet(QString::fromUtf8("background-color: rgb(40, 60, 79);"));
+        frame_19->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_19->setFrameShadow(QFrame::Shadow::Raised);
+        gridLayout_20 = new QGridLayout(frame_19);
+        gridLayout_20->setObjectName("gridLayout_20");
+        verticalLayout_8 = new QVBoxLayout();
+        verticalLayout_8->setObjectName("verticalLayout_8");
+        label_45 = new QLabel(frame_19);
+        label_45->setObjectName("label_45");
+        label_45->setFont(font1);
+        label_45->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        label_45->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        verticalLayout_8->addWidget(label_45, 0, Qt::AlignmentFlag::AlignHCenter);
+
+        lineEdit_firm_4 = new QLineEdit(frame_19);
+        lineEdit_firm_4->setObjectName("lineEdit_firm_4");
+        sizePolicy.setHeightForWidth(lineEdit_firm_4->sizePolicy().hasHeightForWidth());
+        lineEdit_firm_4->setSizePolicy(sizePolicy);
+        lineEdit_firm_4->setMinimumSize(QSize(0, 24));
+        lineEdit_firm_4->setStyleSheet(QString::fromUtf8("border-radius: 10;\n"
+"background-color: rgb(97, 108, 117);\n"
+"color: rgb(255, 255, 255);"));
+        lineEdit_firm_4->setReadOnly(false);
+
+        verticalLayout_8->addWidget(lineEdit_firm_4);
+
+        verticalLayout_8->setStretch(1, 1);
+
+        gridLayout_20->addLayout(verticalLayout_8, 0, 0, 1, 1);
+
+
+        gridLayout_22->addWidget(frame_19, 2, 1, 1, 1);
+
+        horizontalSpacer_5 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_22->addItem(horizontalSpacer_5, 2, 2, 1, 1);
+
+        tabWidget->addTab(pid, QString());
 
         gridLayout_41->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -2241,6 +2426,7 @@ public:
         QtUISBR->setWindowTitle(QCoreApplication::translate("QtUISBR", "QtUISBR", nullptr));
         label_2->setText(QCoreApplication::translate("QtUISBR", "Version", nullptr));
         label_40->setText(QCoreApplication::translate("QtUISBR", "Modo", nullptr));
+        label_42->setText(QCoreApplication::translate("QtUISBR", "Battery Level", nullptr));
         label_41->setText(QCoreApplication::translate("QtUISBR", "Puerto Serie", nullptr));
 #if QT_CONFIG(tooltip)
         pushButton_open->setToolTip(QCoreApplication::translate("QtUISBR", "<html><head/><body><p>Abrir pagina para configurar WiFi</p></body></html>", nullptr));
@@ -2320,6 +2506,14 @@ public:
         label_7->setText(QCoreApplication::translate("QtUISBR", "Giroscopio Z", nullptr));
         checkBox_hcsr_6->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(mpu), QCoreApplication::translate("QtUISBR", "MPU6050", nullptr));
+        radioButton->setText(QCoreApplication::translate("QtUISBR", "RadioButton", nullptr));
+        radioButton_2->setText(QCoreApplication::translate("QtUISBR", "RadioButton", nullptr));
+        radioButton_3->setText(QCoreApplication::translate("QtUISBR", "RadioButton", nullptr));
+        radioButton_4->setText(QCoreApplication::translate("QtUISBR", "RadioButton", nullptr));
+        label_43->setText(QCoreApplication::translate("QtUISBR", "Proporcional", nullptr));
+        label_44->setText(QCoreApplication::translate("QtUISBR", "Integrativo", nullptr));
+        label_45->setText(QCoreApplication::translate("QtUISBR", "Derivativo", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(pid), QCoreApplication::translate("QtUISBR", "PID", nullptr));
     } // retranslateUi
 
 };

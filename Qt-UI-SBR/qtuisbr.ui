@@ -37,94 +37,114 @@ border-radius: 10;</string>
       <property name="frameShadow">
        <enum>QFrame::Shadow::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout_10">
+      <layout class="QGridLayout" name="gridLayout_8">
        <item row="0" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="2,1,2,2,4,0">
+        <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,3">
+         <item alignment="Qt::AlignmentFlag::AlignRight">
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <family>Louis George Cafe</family>
+             <pointsize>11</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Version</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,3">
-           <item alignment="Qt::AlignmentFlag::AlignRight">
-            <widget class="QLabel" name="label_2">
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>11</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>Version</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_firm">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 10;
+          <widget class="QLineEdit" name="lineEdit_firm">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius: 10;
 background-color: rgb(97, 108, 117);
 color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="readOnly">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-          </layout>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,2">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QLabel" name="label_40">
+           <property name="font">
+            <font>
+             <family>Louis George Cafe</family>
+             <pointsize>11</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Modo</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,2">
-           <item alignment="Qt::AlignmentFlag::AlignHCenter">
-            <widget class="QLabel" name="label_40">
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>11</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>Modo</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_mode">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 10;
+          <widget class="QLineEdit" name="lineEdit_mode">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius: 10;
 background-color: rgb(97, 108, 117);</string>
-             </property>
-             <property name="readOnly">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-          </layout>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,3">
+         <item>
+          <widget class="QLabel" name="label_42">
+           <property name="font">
+            <font>
+             <family>Louis George Cafe</family>
+             <pointsize>11</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Battery Level</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
          </item>
          <item>
-          <widget class="QProgressBar" name="progressBar">
+          <widget class="QProgressBar" name="progressBar_battery">
            <property name="font">
             <font>
              <bold>true</bold>
@@ -146,78 +166,80 @@ QProgressBar::chunk{
            </property>
           </widget>
          </item>
+        </layout>
+       </item>
+       <item row="0" column="3">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>216</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="4">
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,4">
          <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,4">
-           <item>
-            <widget class="QLabel" name="label_41">
-             <property name="font">
-              <font>
-               <family>Louis George Cafe</family>
-               <pointsize>11</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>Puerto Serie</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="comboBox_com">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-color: rgb(64, 64, 64);
-color: rgb(255, 255, 255);
-background-color: rgb(97, 108, 117);</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_open">
+          <widget class="QLabel" name="label_41">
            <property name="font">
             <font>
              <family>Louis George Cafe</family>
-             <pointsize>13</pointsize>
+             <pointsize>11</pointsize>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Puerto Serie</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_com">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>24</height>
+            </size>
            </property>
            <property name="cursor">
             <cursorShape>PointingHandCursor</cursorShape>
            </property>
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abrir pagina para configurar WiFi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton {
+            <string notr="true">border-color: rgb(64, 64, 64);
+color: rgb(255, 255, 255);
+background-color: rgb(97, 108, 117);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="5">
+        <widget class="QPushButton" name="pushButton_open">
+         <property name="font">
+          <font>
+           <family>Louis George Cafe</family>
+           <pointsize>13</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abrir pagina para configurar WiFi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
                 background-color: rgba(255, 255, 255, 0);
                 color: rgb(255, 255, 255);
                 border: none;
@@ -231,13 +253,11 @@ background-color: rgb(97, 108, 117);</string>
             QPushButton:pressed {
                 color: #41A3F2;
             }</string>
-           </property>
-           <property name="text">
-            <string>Open</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+         </property>
+         <property name="text">
+          <string>Open</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -323,7 +343,7 @@ background-color: rgb(97, 108, 117);</string>
               <string>Enviar</string>
              </property>
              <property name="icon">
-              <iconset resource="../../../../../../programacion/QtCreator/newUICar/newUICar/recursos.qrc">
+              <iconset>
                <normaloff>:/Iconos/resources/enviar.png</normaloff>:/Iconos/resources/enviar.png</iconset>
              </property>
             </widget>
@@ -382,7 +402,7 @@ QPushButton:checked {
               <string>Datos en Vivo</string>
              </property>
              <property name="icon">
-              <iconset resource="../../../../../../programacion/QtCreator/newUICar/newUICar/recursos.qrc">
+              <iconset>
                <normaloff>:/Iconos/resources/transferencia-de-datos.png</normaloff>:/Iconos/resources/transferencia-de-datos.png</iconset>
              </property>
              <property name="checkable">
@@ -427,21 +447,21 @@ QPushButton:checked {
             }
 
             QPushButton:hover {
-                color: #ff5853;
+                 color: #41A3F2;
             }
 
             QPushButton:pressed {
-                color: #ff5853;
+                 color: #41A3F2;
             }
 QPushButton:checked {
-                color: #fd413c;
+                 color: #41A3F2;
             }</string>
              </property>
              <property name="text">
               <string>Trajectory</string>
              </property>
              <property name="icon">
-              <iconset resource="../../../../../../programacion/QtCreator/newUICar/newUICar/recursos.qrc">
+              <iconset>
                <normaloff>:/Iconos/resources/wifi.png</normaloff>:/Iconos/resources/wifi.png</iconset>
              </property>
             </widget>
@@ -521,7 +541,7 @@ background-color: rgb(255, 255, 255);</string>
               <string>Clear</string>
              </property>
              <property name="icon">
-              <iconset resource="../../../../../../programacion/QtCreator/newUICar/newUICar/recursos.qrc">
+              <iconset>
                <normaloff>:/Iconos/resources/eliminar.png</normaloff>:/Iconos/resources/eliminar.png</iconset>
              </property>
             </widget>
@@ -559,7 +579,7 @@ background-color: rgb(255, 255, 255);</string>
               <string>Clear</string>
              </property>
              <property name="icon">
-              <iconset resource="../../../../../../programacion/QtCreator/newUICar/newUICar/recursos.qrc">
+              <iconset>
                <normaloff>:/Iconos/resources/eliminar.png</normaloff>:/Iconos/resources/eliminar.png</iconset>
              </property>
             </widget>
@@ -652,7 +672,7 @@ QTabBar::tab:!selected {
 </string>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>3</number>
          </property>
          <property name="elideMode">
           <enum>Qt::TextElideMode::ElideNone</enum>
@@ -741,7 +761,7 @@ QTabBar::tab:!selected {
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_7"/>
+                 <widget class="QLCDNumber" name="lcdNumber_LF1"/>
                 </item>
                </layout>
               </widget>
@@ -817,7 +837,7 @@ QTabBar::tab:!selected {
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_10"/>
+                 <widget class="QLCDNumber" name="lcdNumber_LF2"/>
                 </item>
                </layout>
               </widget>
@@ -893,7 +913,7 @@ QTabBar::tab:!selected {
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_12"/>
+                 <widget class="QLCDNumber" name="lcdNumber_LF3"/>
                 </item>
                </layout>
               </widget>
@@ -911,7 +931,7 @@ QTabBar::tab:!selected {
                </property>
                <layout class="QGridLayout" name="gridLayout_17" rowstretch="1,0,10">
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_14"/>
+                 <widget class="QLCDNumber" name="lcdNumber_LF4"/>
                 </item>
                 <item row="1" column="0">
                  <widget class="Line" name="line_16">
@@ -1049,7 +1069,7 @@ QTabBar::tab:!selected {
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_8"/>
+                 <widget class="QLCDNumber" name="lcdNumber_WD1"/>
                 </item>
                </layout>
               </widget>
@@ -1125,7 +1145,7 @@ QTabBar::tab:!selected {
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_9"/>
+                 <widget class="QLCDNumber" name="lcdNumber_WD2"/>
                 </item>
                </layout>
               </widget>
@@ -1201,7 +1221,7 @@ QTabBar::tab:!selected {
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_11"/>
+                 <widget class="QLCDNumber" name="lcdNumber_WD3"/>
                 </item>
                </layout>
               </widget>
@@ -1277,7 +1297,7 @@ QTabBar::tab:!selected {
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_13"/>
+                 <widget class="QLCDNumber" name="lcdNumber_WD4"/>
                 </item>
                </layout>
               </widget>
@@ -1877,7 +1897,7 @@ border-radius:5px;</string>
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_21"/>
+                 <widget class="QLCDNumber" name="lcdNumber_Roll"/>
                 </item>
                </layout>
               </widget>
@@ -1953,7 +1973,7 @@ border-radius:5px;</string>
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_22"/>
+                 <widget class="QLCDNumber" name="lcdNumber_Pitch"/>
                 </item>
                </layout>
               </widget>
@@ -2029,7 +2049,7 @@ border-radius:5px;</string>
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_23"/>
+                 <widget class="QLCDNumber" name="lcdNumber_Yaw"/>
                 </item>
                </layout>
               </widget>
@@ -2591,7 +2611,7 @@ border-radius:5px;</string>
                </widget>
               </item>
               <item row="2" column="0">
-               <widget class="QLCDNumber" name="lcdNumber"/>
+               <widget class="QLCDNumber" name="lcdNumber_accx"/>
               </item>
              </layout>
             </widget>
@@ -2667,7 +2687,7 @@ border-radius:5px;</string>
                </widget>
               </item>
               <item row="2" column="0">
-               <widget class="QLCDNumber" name="lcdNumber_2"/>
+               <widget class="QLCDNumber" name="lcdNumber_accy"/>
               </item>
              </layout>
             </widget>
@@ -2743,7 +2763,7 @@ border-radius:5px;</string>
                </widget>
               </item>
               <item row="2" column="0">
-               <widget class="QLCDNumber" name="lcdNumber_3"/>
+               <widget class="QLCDNumber" name="lcdNumber_accz"/>
               </item>
              </layout>
             </widget>
@@ -2821,7 +2841,7 @@ border-radius:5px;</string>
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_4"/>
+                 <widget class="QLCDNumber" name="lcdNumber_gyrox"/>
                 </item>
                </layout>
               </widget>
@@ -2897,7 +2917,7 @@ border-radius:5px;</string>
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_5"/>
+                 <widget class="QLCDNumber" name="lcdNumber_gyroy"/>
                 </item>
                </layout>
               </widget>
@@ -2973,12 +2993,279 @@ border-radius:5px;</string>
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QLCDNumber" name="lcdNumber_6"/>
+                 <widget class="QLCDNumber" name="lcdNumber_gyroz"/>
                 </item>
                </layout>
               </widget>
              </item>
             </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pid">
+          <attribute name="title">
+           <string>PID</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_22">
+           <item row="0" column="0" rowspan="3">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QRadioButton" name="radioButton">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_2">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_3">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_4">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="1">
+            <widget class="QFrame" name="frame_17">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(40, 60, 79);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,1">
+                <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                 <widget class="QLabel" name="label_43">
+                  <property name="font">
+                   <font>
+                    <family>Louis George Cafe</family>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Proporcional</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_firm_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 10;
+background-color: rgb(97, 108, 117);
+color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>526</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QFrame" name="frame_18">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(40, 60, 79);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_19">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,1">
+                <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                 <widget class="QLabel" name="label_44">
+                  <property name="font">
+                   <font>
+                    <family>Louis George Cafe</family>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Integrativo</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_firm_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 10;
+background-color: rgb(97, 108, 117);
+color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>526</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QFrame" name="frame_19">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(40, 60, 79);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_20">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,1">
+                <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                 <widget class="QLabel" name="label_45">
+                  <property name="font">
+                   <font>
+                    <family>Louis George Cafe</family>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Derivativo</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_firm_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 10;
+background-color: rgb(97, 108, 117);
+color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>526</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>
@@ -2990,8 +3277,6 @@ border-radius:5px;</string>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="../../../../../../programacion/QtCreator/newUICar/newUICar/recursos.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
