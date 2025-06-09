@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QtSerialPort/QSerialPort>
-#include <QtSerialPort/QSerialPortInfo>
+#include <QSerialPortInfo>
 #include <QMessageBox>
 #include <QTimer>
 #include <QLCDNumber>
@@ -85,12 +85,27 @@ public:
     ~QtUISBR();
 
     void OnQTimer1();
-    void on_pushButton_open_clicked();
+    /*void on_pushButton_open_clicked();*/
     void OnRxChar();
     void DecodeCmd(uint8_t *rxBuf);
     bool eventFilter(QObject *watched, QEvent *event);
     void on_pushButton_send_clicked();
     void SendCMD(uint8_t *buf, uint8_t length);
+private slots:
+    void on_pushButton_open_clicked();
+
+    void on_pushButton_clear_clicked();
+
+    void on_pushButton_clear_2_clicked();
+
+    void on_lineEdit_editingFinished();
+
+    void on_lineEdit_2_editingFinished();
+
+    void on_verticalSlider_sliderReleased();
+
+    void on_verticalSlider_2_sliderReleased();
+
 private:
     Ui::QtUISBR *ui;
 

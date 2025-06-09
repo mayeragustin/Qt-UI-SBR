@@ -1,1 +1,10 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/Icon">
+        <file>Resources/Icons/chart-histogram w.png</file>
+        <file>Resources/Icons/chart-histogram.png</file>
+        <file>Resources/Icons/marker w.png</file>
+        <file>Resources/Icons/marker.png</file>
+        <file>Resources/Icons/paper-plane-top b.png</file>
+        <file>Resources/Icons/usb-pendrive w.png</file>
+    </qresource>
+</RCC>

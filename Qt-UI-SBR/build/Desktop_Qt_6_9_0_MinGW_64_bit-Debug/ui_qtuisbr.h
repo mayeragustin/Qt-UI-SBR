@@ -294,29 +294,30 @@ public:
     QLCDNumber *lcdNumber_gyroz;
     QWidget *pid;
     QGridLayout *gridLayout_22;
+    QHBoxLayout *horizontalLayout_15;
     QVBoxLayout *verticalLayout_5;
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
     QRadioButton *radioButton_3;
     QRadioButton *radioButton_4;
+    QSpacerItem *horizontalSpacer_6;
+    QVBoxLayout *verticalLayout_9;
     QFrame *frame_17;
     QGridLayout *gridLayout_10;
     QVBoxLayout *verticalLayout_6;
     QLabel *label_43;
     QLineEdit *lineEdit_firm_2;
-    QSpacerItem *horizontalSpacer_3;
     QFrame *frame_18;
     QGridLayout *gridLayout_19;
     QVBoxLayout *verticalLayout_7;
     QLabel *label_44;
     QLineEdit *lineEdit_firm_3;
-    QSpacerItem *horizontalSpacer_4;
     QFrame *frame_19;
     QGridLayout *gridLayout_20;
     QVBoxLayout *verticalLayout_8;
     QLabel *label_45;
     QLineEdit *lineEdit_firm_4;
-    QSpacerItem *horizontalSpacer_5;
+    QSpacerItem *horizontalSpacer_4;
 
     void setupUi(QMainWindow *QtUISBR)
     {
@@ -476,6 +477,9 @@ public:
 "            QPushButton:pressed {\n"
 "                color: #41A3F2;\n"
 "            }"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Icon/Resources/Icons/usb-pendrive w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_open->setIcon(icon);
 
         gridLayout_8->addWidget(pushButton_open, 0, 5, 1, 1);
 
@@ -526,9 +530,9 @@ public:
 "            QPushButton:pressed {\n"
 "                background-color: rgb(66, 184, 126);\n"
 "            }"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Iconos/resources/enviar.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_send->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Icon/Resources/Icons/paper-plane-top b.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_send->setIcon(icon1);
 
         horizontalLayout_4->addWidget(pushButton_send);
 
@@ -560,9 +564,9 @@ public:
 "QPushButton:checked {\n"
 "                color: #41A3F2;\n"
 "            }"));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/Iconos/resources/transferencia-de-datos.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_live->setIcon(icon1);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/Icon/Resources/Icons/chart-histogram w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_live->setIcon(icon2);
         pushButton_live->setCheckable(true);
 
         horizontalLayout_4->addWidget(pushButton_live);
@@ -592,9 +596,9 @@ public:
 "QPushButton:checked {\n"
 "                 color: #41A3F2;\n"
 "            }"));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/Iconos/resources/wifi.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_confWifi->setIcon(icon2);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/Icon/Resources/Icons/marker w.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_confWifi->setIcon(icon3);
 
         horizontalLayout_4->addWidget(pushButton_confWifi);
 
@@ -645,9 +649,9 @@ public:
 "            QPushButton:hover {\n"
 "                background-color: #ff5853;\n"
 "            }"));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/Iconos/resources/eliminar.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        pushButton_clear->setIcon(icon3);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/Iconos/resources/eliminar.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_clear->setIcon(icon4);
 
         horizontalLayout_52->addWidget(pushButton_clear);
 
@@ -665,7 +669,7 @@ public:
 "            QPushButton:hover {\n"
 "                background-color: #ff5853;\n"
 "            }"));
-        pushButton_clear_2->setIcon(icon3);
+        pushButton_clear_2->setIcon(icon4);
 
         horizontalLayout_52->addWidget(pushButton_clear_2);
 
@@ -2256,6 +2260,8 @@ public:
         pid->setObjectName("pid");
         gridLayout_22 = new QGridLayout(pid);
         gridLayout_22->setObjectName("gridLayout_22");
+        horizontalLayout_15 = new QHBoxLayout();
+        horizontalLayout_15->setObjectName("horizontalLayout_15");
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName("verticalLayout_5");
         radioButton = new QRadioButton(pid);
@@ -2279,8 +2285,14 @@ public:
         verticalLayout_5->addWidget(radioButton_4);
 
 
-        gridLayout_22->addLayout(verticalLayout_5, 0, 0, 3, 1);
+        horizontalLayout_15->addLayout(verticalLayout_5);
 
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_15->addItem(horizontalSpacer_6);
+
+        verticalLayout_9 = new QVBoxLayout();
+        verticalLayout_9->setObjectName("verticalLayout_9");
         frame_17 = new QFrame(pid);
         frame_17->setObjectName("frame_17");
         frame_17->setStyleSheet(QString::fromUtf8("background-color: rgb(40, 60, 79);"));
@@ -2318,11 +2330,7 @@ public:
         gridLayout_10->addLayout(verticalLayout_6, 0, 0, 1, 1);
 
 
-        gridLayout_22->addWidget(frame_17, 0, 1, 1, 1);
-
-        horizontalSpacer_3 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_22->addItem(horizontalSpacer_3, 0, 2, 1, 1);
+        verticalLayout_9->addWidget(frame_17);
 
         frame_18 = new QFrame(pid);
         frame_18->setObjectName("frame_18");
@@ -2358,11 +2366,7 @@ public:
         gridLayout_19->addLayout(verticalLayout_7, 0, 0, 1, 1);
 
 
-        gridLayout_22->addWidget(frame_18, 1, 1, 1, 1);
-
-        horizontalSpacer_4 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_22->addItem(horizontalSpacer_4, 1, 2, 1, 1);
+        verticalLayout_9->addWidget(frame_18);
 
         frame_19 = new QFrame(pid);
         frame_19->setObjectName("frame_19");
@@ -2398,11 +2402,21 @@ public:
         gridLayout_20->addLayout(verticalLayout_8, 0, 0, 1, 1);
 
 
-        gridLayout_22->addWidget(frame_19, 2, 1, 1, 1);
+        verticalLayout_9->addWidget(frame_19);
 
-        horizontalSpacer_5 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        gridLayout_22->addItem(horizontalSpacer_5, 2, 2, 1, 1);
+        horizontalLayout_15->addLayout(verticalLayout_9);
+
+        horizontalSpacer_4 = new QSpacerItem(526, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_15->addItem(horizontalSpacer_4);
+
+        horizontalLayout_15->setStretch(0, 1);
+        horizontalLayout_15->setStretch(1, 1);
+        horizontalLayout_15->setStretch(2, 2);
+        horizontalLayout_15->setStretch(3, 4);
+
+        gridLayout_22->addLayout(horizontalLayout_15, 0, 0, 1, 1);
 
         tabWidget->addTab(pid, QString());
 
@@ -2415,7 +2429,7 @@ public:
 
         retranslateUi(QtUISBR);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(QtUISBR);

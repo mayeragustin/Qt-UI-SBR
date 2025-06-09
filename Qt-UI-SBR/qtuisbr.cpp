@@ -1,6 +1,6 @@
 #include "qtuisbr.h"
 #include "ui_qtuisbr.h"
-
+#include <QDebug>
 
 #define ALPHA 0.98
 
@@ -44,7 +44,6 @@ QtUISBR::~QtUISBR()
     delete ui;
 }
 
-
 void QtUISBR::OnQTimer1()
 {
     buffer[0] = MPUBLOCK;
@@ -76,23 +75,16 @@ void QtUISBR::SendCMD(uint8_t *buf, uint8_t length){
     for (int i=0; i<length+7; i++) {
         strHex = strHex + QString("%1").arg(tx[i], 2, 16, QChar('0')).toUpper();
     }
-    //emit inRxChar(strHex);
-    //ui->plainTextEdit->appendPlainText(strHex);
     if(QSerialPort1->isOpen())
         QSerialPort1->write((char *)tx, length+7);
-
-    //emit sendCMDWifi(tx, length+7);
 }
-
-
 
 void QtUISBR::on_pushButton_open_clicked()
 {
     if(QSerialPort1->isOpen()){
         QSerialPort1->close();
         ui->pushButton_open->setText("Open");
-    }
-    else{
+    }else{
         if(ui->comboBox_com->currentText() == "")
             return;
         QSerialPort1->setPortName(ui->comboBox_com->currentText());
@@ -101,6 +93,7 @@ void QtUISBR::on_pushButton_open_clicked()
         QSerialPort1->setDataBits(QSerialPort::Data8);
         QSerialPort1->setStopBits(QSerialPort::OneStop);
         QSerialPort1->setFlowControl(QSerialPort::NoFlowControl);
+
         if(QSerialPort1->open(QSerialPort::ReadWrite)){
             ui->pushButton_open->setText("Close");
         }else{
@@ -108,6 +101,25 @@ void QtUISBR::on_pushButton_open_clicked()
         }
     }
 }
+
+
+bool QtUISBR::eventFilter(QObject *watched, QEvent *event){
+    if(watched == ui->comboBox_com){
+        if (event->type() == QEvent::MouseButtonPress) {
+            ui->comboBox_com->clear();
+            QSerialPortInfo SerialPortInfo1;
+            for(int i=0;i<SerialPortInfo1.availablePorts().count();i++)
+                ui->comboBox_com->addItem(SerialPortInfo1.availablePorts().at(i).portName());
+            return QMainWindow::eventFilter(watched, event);
+        }
+        else {
+            return false;
+        }
+    }else{
+        return QMainWindow::eventFilter(watched, event);
+    }
+}
+
 
 void QtUISBR::OnRxChar(){
     int count;
@@ -338,24 +350,6 @@ void QtUISBR::DecodeCmd(uint8_t *rxBuf){
     }
 }
 
-bool QtUISBR::eventFilter(QObject *watched, QEvent *event){
-    if(watched == ui->comboBox_com){
-        if (event->type() == QEvent::MouseButtonPress) {
-            ui->comboBox_com->clear();
-            QSerialPortInfo SerialPortInfo1;
-            for(int i=0;i<SerialPortInfo1.availablePorts().count();i++)
-                ui->comboBox_com->addItem(SerialPortInfo1.availablePorts().at(i).portName());
-            return QMainWindow::eventFilter(watched, event);
-        }
-        else {
-            return false;
-        }
-    }
-    else{
-        return QMainWindow::eventFilter(watched, event);
-    }
-}
-
 
 void QtUISBR::on_pushButton_send_clicked()/*BOTON DE ENVIO*/
 {
@@ -392,3 +386,59 @@ void QtUISBR::on_pushButton_send_clicked()/*BOTON DE ENVIO*/
         SendCMD(buf, n);
     }
 }
+
+
+
+void QtUISBR::on_pushButton_clear_clicked()
+{
+    ui->plainTextEdit->clear();
+}
+
+
+
+
+void QtUISBR::on_pushButton_clear_2_clicked()
+{
+    ui->plainTextEdit_2->clear();
+}
+
+
+void QtUISBR::on_lineEdit_editingFinished()
+{
+    int32_t val = ui->lineEdit->text().toInt();
+    if(val <= 100 && val >= 100){
+        ui->verticalSlider->setValue(val);
+    }
+}
+
+
+void QtUISBR::on_lineEdit_2_editingFinished()
+{
+    int32_t val = ui->lineEdit_2->text().toInt();
+    if(val <= 100 && val >= 100){
+        ui->verticalSlider->setValue(val);
+    }
+}
+
+
+void QtUISBR::on_verticalSlider_sliderReleased()
+{
+    int32_t val = ui->verticalSlider->value();
+    ui->lineEdit->setText(QString("&1").arg(val));
+    buffer[0] = MOTOR;
+    buffer[1] = 0;
+    buffer[2] = val;
+    SendCMD(buffer, 3);
+}
+
+
+void QtUISBR::on_verticalSlider_2_sliderReleased()
+{
+    int32_t val = ui->verticalSlider_2->value();
+    ui->lineEdit_2->setText(QString("&1").arg(val));
+    buffer[0] = MOTOR;
+    buffer[1] = 1;
+    buffer[2] = val;
+    SendCMD(buffer, 3);
+}
+

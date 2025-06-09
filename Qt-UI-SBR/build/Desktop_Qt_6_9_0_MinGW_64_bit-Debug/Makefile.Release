@@ -103,7 +103,13 @@ compiler_rcc_make_all: release/qrc_resources.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_resources.cpp
 release/qrc_resources.cpp: ../../resources.qrc \
-		D:/Qt/6.9.0/mingw_64/bin/rcc.exe
+		D:/Qt/6.9.0/mingw_64/bin/rcc.exe \
+		../../Resources/Icons/marker\ w.png \
+		../../Resources/Icons/chart-histogram.png \
+		../../Resources/Icons/chart-histogram\ w.png \
+		../../Resources/Icons/paper-plane-top\ b.png \
+		../../Resources/Icons/marker.png \
+		../../Resources/Icons/usb-pendrive\ w.png
 	D:\Qt\6.9.0\mingw_64\bin\rcc.exe -name resources --no-zstd ..\..\resources.qrc -o release\qrc_resources.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
