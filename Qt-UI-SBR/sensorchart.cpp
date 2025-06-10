@@ -1,5 +1,11 @@
+/**
+ * @file sensorchart.cpp
+ * @brief Implementación de la clase SensorChart
+ * @author Agustín Alejandro Mayer
+ */
+
 #include "sensorchart.h"
-#include "qboxlayout.h"
+#include <QVBoxLayout>
 
 SensorChart::SensorChart(QWidget *parent)
     : QWidget(parent)

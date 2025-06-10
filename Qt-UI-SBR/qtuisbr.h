@@ -13,6 +13,9 @@
 #include <QtGui>
 #include <QtCharts/QtCharts>
 
+#include <QtNetwork/QUdpSocket>
+#include <QtNetwork/QHostAddress>
+
 #define RAD_TO_DEG 57.295779513f
 
 #define LMotor          Motors[0]
@@ -57,10 +60,17 @@ typedef struct{
     }Parabola;
 }s_LineFollower;
 
+
+typedef struct{
+    uint16_t data[4];
+}s_WallDetector;
+
+
 typedef struct CAR_VARIABLES{
     s_MPU6050 MPU6050;
     s_Motor Motors[2];
     s_LineFollower LineFollower;
+    s_WallDetector WallDetector;
 }sCar;
 
 
@@ -94,7 +104,6 @@ public:
     void OnRxChar();
     void DecodeCmd(uint8_t *rxBuf);
     bool eventFilter(QObject *watched, QEvent *event);
-    void on_pushButton_send_clicked();
     void SendCMD(uint8_t *buf, uint8_t length);
 private slots:
     void on_pushButton_open_clicked();
@@ -110,6 +119,10 @@ private slots:
     void on_verticalSlider_sliderReleased();
 
     void on_verticalSlider_2_sliderReleased();
+
+    void on_pushButton_send_clicked();
+
+    void on_pushButton_openPort_clicked();
 
 private:
     Ui::QtUISBR *ui;
@@ -153,6 +166,13 @@ private:
 
     SensorChart *grafico;
     time_t graphtimer = 0;
+
+
+    QUdpSocket *QUdpSocket1;
+    QHostAddress  hostAddres;
+    quint16   remotePort;
+    void onRxUDP();
+    uint8_t buff[256];
 
 };
 #endif // QTUISBR_H

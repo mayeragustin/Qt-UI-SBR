@@ -19,6 +19,8 @@ QtUISBR::QtUISBR(QWidget *parent)
     ui->comboBox_command->addItem("IR", 0xA6);
     ui->comboBox_command->addItem("DEBUG", 0xDE);
 
+    QUdpSocket1 = new QUdpSocket(this);
+    connect(QUdpSocket1,&QUdpSocket::readyRead,this,&QtUISBR::onRxUDP);
 
     QTimer1 = new QTimer(this);
     connect(QTimer1, &QTimer::timeout, this, &QtUISBR::OnQTimer1);
@@ -43,31 +45,91 @@ QtUISBR::QtUISBR(QWidget *parent)
 
     grafico->setRangoEjeY(INT16_MIN, INT16_MAX);
 
+    // Acelerómetro
     grafico->agregarSensor("Acc X", Qt::red);
-    connect(ui->checkBox_accx_graph, &QCheckBox::toggled, [=](bool checked){
+    connect(ui->checkBox_graph_m, &QCheckBox::toggled, [=](bool checked){
         grafico->mostrarSensor("Acc X", checked);
     });
-    grafico->agregarSensor("Acc Y", Qt::blue);
-    connect(ui->checkBox_accy_graph, &QCheckBox::toggled, [=](bool checked){
+    grafico->agregarSensor("Acc Y", Qt::green);
+    connect(ui->checkBox_graph_m_2, &QCheckBox::toggled, [=](bool checked){
         grafico->mostrarSensor("Acc Y", checked);
     });
-    grafico->agregarSensor("Acc Z", Qt::green);
-    connect(ui->checkBox_accz_graph, &QCheckBox::toggled, [=](bool checked){
+    grafico->agregarSensor("Acc Z", Qt::blue);
+    connect(ui->checkBox_graph_m_3, &QCheckBox::toggled, [=](bool checked){
         grafico->mostrarSensor("Acc Z", checked);
     });
-    grafico->agregarSensor("Gyro X", Qt::yellow);
-    connect(ui->checkBox_gyrox_graph, &QCheckBox::toggled, [=](bool checked){
+
+    // Giroscopio
+    grafico->agregarSensor("Gyro X", Qt::magenta);
+    connect(ui->checkBox_graph_m_4, &QCheckBox::toggled, [=](bool checked){
         grafico->mostrarSensor("Gyro X", checked);
     });
-    grafico->agregarSensor("Gyro Y", Qt::magenta);
-    connect(ui->checkBox_gyroy_graph, &QCheckBox::toggled, [=](bool checked){
+    grafico->agregarSensor("Gyro Y", Qt::cyan);
+    connect(ui->checkBox_graph_m_5, &QCheckBox::toggled, [=](bool checked){
         grafico->mostrarSensor("Gyro Y", checked);
     });
-    grafico->agregarSensor("Gyro Z", Qt::cyan);
-    connect(ui->checkBox_gyroz_graph, &QCheckBox::toggled, [=](bool checked){
+    grafico->agregarSensor("Gyro Z", Qt::yellow);
+    connect(ui->checkBox_graph_m_6, &QCheckBox::toggled, [=](bool checked){
         grafico->mostrarSensor("Gyro Z", checked);
     });
-    // Luego, en tu timer o donde recibas datos:
+
+    // Line Followers
+    grafico->agregarSensor("LF1", Qt::darkRed);
+    connect(ui->checkBox_graph_ir, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("LF1", checked);
+    });
+    grafico->agregarSensor("LF2", Qt::darkGreen);
+    connect(ui->checkBox_graph_ir_2, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("LF2", checked);
+    });
+    grafico->agregarSensor("LF3", Qt::darkBlue);
+    connect(ui->checkBox_graph_ir_3, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("LF3", checked);
+    });
+    grafico->agregarSensor("LF4", Qt::darkCyan);
+    connect(ui->checkBox_graph_ir_4, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("LF4", checked);
+    });
+
+    // Wall Detectors
+    grafico->agregarSensor("WD1", Qt::gray);
+    connect(ui->checkBox_graph_ir_5, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("WD1", checked);
+    });
+    grafico->agregarSensor("WD2", Qt::darkGray);
+    connect(ui->checkBox_graph_ir_6, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("WD2", checked);
+    });
+    grafico->agregarSensor("WD3", Qt::lightGray);
+    connect(ui->checkBox_graph_ir_7, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("WD3", checked);
+    });
+    grafico->agregarSensor("WD4", Qt::white);
+    connect(ui->checkBox_graph_ir_8, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("WD4", checked);
+    });
+
+    grafico->agregarSensor("PPS L", Qt::red);
+    connect(ui->checkBox_graph_ir_8, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("PPS L", checked);
+    });
+    grafico->agregarSensor("PPS R", Qt::blue);
+    connect(ui->checkBox_graph_ir_8, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("PPS R", checked);
+    });
+
+    grafico->agregarSensor("Roll", Qt::red);
+    connect(ui->checkBox_graph_ang, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Roll", checked);
+    });
+    grafico->agregarSensor("Pitch", Qt::green);
+    connect(ui->checkBox_graph_ang_2, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Pitch", checked);
+    });
+    grafico->agregarSensor("Yaw", Qt::blue);
+    connect(ui->checkBox_graph_ang_3, &QCheckBox::toggled, [=](bool checked){
+        grafico->mostrarSensor("Yaw", checked);
+    });
 }
 
 QtUISBR::~QtUISBR()
@@ -78,7 +140,7 @@ QtUISBR::~QtUISBR()
 void QtUISBR::OnQTimer1()
 {
     if(ui->pushButton_live->isChecked()){
-        if(ui->checkBox_mpu6050datalive->isChecked()){
+        if(ui->checkBox_mpudatalive->isChecked()){
             buffer[0] = MPUBLOCK;
             SendCMD(buffer, 1);
         }
@@ -88,9 +150,6 @@ void QtUISBR::OnQTimer1()
         }
         graphtimer++;
     }
-
-
-
 }
 
 void QtUISBR::SendCMD(uint8_t *buf, uint8_t length){
@@ -291,14 +350,13 @@ void QtUISBR::DecodeCmd(uint8_t *rxBuf){
         w.u8[0] = rxBuf[17];
         w.u8[1] = rxBuf[18];
         ui->progressBar_battery->setValue((float)w.u16[0] * (100.0f / 4095.0f));
+        grafico->actualizarSensor("LF1", Car.MPU6050.Acc.x, graphtimer);
         break;
     case USERTEXT:
-        w.u8[0] = rxBuf[1];
-        w.u8[1] = rxBuf[2];
-        w.u8[2] = rxBuf[3];
-        w.u8[3] = rxBuf[4];
-
-        ui->plainTextEdit->insertPlainText(QString("%1").arg(QChar(w.u32)));
+        ui->plainTextEdit->appendPlainText(QString("MSG: "));
+        for(uint8_t i = 0; i < rxBuf[1]; i++){
+            ui->plainTextEdit->insertPlainText(QString("%1").arg(QChar(rxBuf[i+2])));
+        }
         ui->plainTextEdit->insertPlainText("\n");
         break;
     case USERNUMBER:
@@ -408,42 +466,6 @@ void QtUISBR::DecodeCmd(uint8_t *rxBuf){
 }
 
 
-void QtUISBR::on_pushButton_send_clicked()/*BOTON DE ENVIO*/
-{
-    uint8_t cmd, buf[24];
-    int n;
-
-    if(ui->comboBox_command->currentText() == "")
-        return;
-
-    cmd = ui->comboBox_command->currentData().toInt();
-    n = 0;
-    switch (cmd) {
-    case ALIVE://ALIVE   PC=>MBED 0xF0 ;  MBED=>PC 0xF0 0x0D
-        n = 1;
-        break;
-    case FIRMWARE://FIRMWARE   PC=>MBED 0xF1 ;  MBED=>PC 0xF1 FIRMWARE
-        n =1;
-        break;
-    case DEBUG:
-        decom.u16[0] = 45;
-        buf[1] = decom.u8[0], buf[2] = decom.u8[1];
-        decom.u16[0] = 24;
-        buf[3] = decom.u8[0], buf[4] = decom.u8[1];
-        n = 5;
-        break;
-    case ADCSINGLE:
-        break;
-    default:
-        break;
-    }
-
-    if(n){
-        buf[0] = cmd;
-        SendCMD(buf, n);
-    }
-}
-
 
 
 void QtUISBR::on_pushButton_clear_clicked()
@@ -492,3 +514,82 @@ void QtUISBR::on_verticalSlider_2_sliderReleased()
     SendCMD(buffer, 3);
 }
 
+
+void QtUISBR::on_pushButton_send_clicked()
+{
+    uint8_t cmd, buf[24];
+    int n;
+
+    if(ui->comboBox_command->currentText() == "")
+        return;
+
+    cmd = ui->comboBox_command->currentData().toInt();
+    n = 0;
+    switch (cmd) {
+    case ALIVE://ALIVE   PC=>MBED 0xF0 ;  MBED=>PC 0xF0 0x0D
+        n = 1;
+        break;
+    case FIRMWARE://FIRMWARE   PC=>MBED 0xF1 ;  MBED=>PC 0xF1 FIRMWARE
+        n =1;
+        break;
+    case DEBUG:
+        decom.u16[0] = 45;
+        buf[1] = decom.u8[0], buf[2] = decom.u8[1];
+        decom.u16[0] = 24;
+        buf[3] = decom.u8[0], buf[4] = decom.u8[1];
+        n = 5;
+        break;
+    case ADCSINGLE:
+        break;
+    default:
+        break;
+    }
+
+    if(n){
+        buf[0] = cmd;
+        SendCMD(buf, n);
+    }
+}
+
+
+void QtUISBR::on_pushButton_openPort_clicked()
+{
+    qint16 port;
+    bool ok;
+    if(QUdpSocket1->isOpen()){
+        QUdpSocket1->abort();
+        QUdpSocket1->close();
+        ui->pushButton_openPort->setText("Abrir");
+       // emit closed();
+    }else{
+        port = ui->lineEdit_localPort->text().toInt(&ok);
+        if(!ok)
+            return;
+        QUdpSocket1->bind(port);
+
+        if(QUdpSocket1->open(QUdpSocket::ReadWrite)){
+            ui->pushButton_openPort->setText("Cerrar");
+           // emit opened();
+        }else{
+            QMessageBox::information(this, tr("SERVER PORT"),tr("ERRRO. Number PORT."));
+        }
+    }
+}
+
+void QtUISBR::onRxUDP(){
+    uint16_t count=0;
+    QString str;
+    while(QUdpSocket1->hasPendingDatagrams()){
+        count=QUdpSocket1->pendingDatagramSize();
+
+        if(count<=0){
+            return;
+        }
+
+        QUdpSocket1->readDatagram((char*)buff,count,&hostAddres, &remotePort);
+
+        ui->lineEdit_remoteIP->setText(hostAddres.toString().right(hostAddres.toString().length()-7));
+        ui->lineEdit_remotePort->setText(QString().number(remotePort));
+        //emit reciveCMD(buff, count);
+    }
+}
